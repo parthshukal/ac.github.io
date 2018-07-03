@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Uber</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 12%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Uber.jpg" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: Hello, I am Garette Camp, the co-founder of Uber. We created it in 2009 to ensure everyone gets a transport service when they want one. But today, we shall discuss more about what's going to happen, not what happened.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starburst Venture) :</strong><br class="mob-hide"> Venture Capitalist: Hello, I am Francios Chopard; the CEO of Starburst Aerospace Accelerator. We actively research and develop aerospace technology, backing startups working on projects in this area.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Hello, I am Elon Musk, the CEO of Tesla. There are many businesses that I own, but Tesla is my favorite. Many people call me the vision behind Tesla. I don't fully agree with them.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p>Garette, a lot of bad stuff in the news about your company. How are you planning to deal with it?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: By getting better, giving the customers what they want, and much more, too. It is now time that our riders become 'flyers'.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: Uber has disrupted the taxi industry. It has made it cheaper and easier - without owning a single vehicle themselves. Now is the time they take to the skies - quite literally.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: SpaceX is already trying to do it. Want to join us in space tourism, Garette?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: Oh no, we have something more practical and earthly in mind. We just want people to be able to call airplanes just like they call in cars today - through their mobile phones.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That's ambitious - something that I would do. Yes, digging tunnels in San Fransisco is not as good as flying over San Fransisco. A personal plane - why not?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: Elon, the project is ambitious. People have been trying to make it a reality since more than 70 years. Ford 5i was the first attempt to give everyone their personal aircraft. A Model T for the skies.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: This technology is something else altogether. In 2010, the succesful test of VTOL (vertical take-off and landing) happened for the first time. And now, we have e-VTOLs which run on electricity.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That is great. These engines won't have emissions and would be relatively cheap - both advantages over conventional helicopters. The Chinese-made Zhang 184 which flew in Dubai is pretty good. It can carry 100kg and a small luggage as well. </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: Yes, we don't want to miss out on it. Our white paper from Oct '16 details our plans to have flying taxis in air by 2020. With them, a 45- mile ride can be shortened from 2 hours to 15 minutes.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: We had similar plans for Tesla, too. But the market is price-sensitive. How expensive will such services be?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: Not expensive at all. Currently an UberX costs $111 for the 45 mile ride. VTOL shall start off with a pricing of $129, and with economies of scale, we shall be able to even get it down to $20 in the long term.       </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: That's pretty cool, and cheap. In LA and Sydney, people spend so much time traveling to work - almost 7 working weeks in a year. Even in Mumbai, at least 3 hours a day are spent behind travel.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Saving time is good. But what shall people do with the time saved? Also, is the investment in aero technology cheaper than building roads to decongest?</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: There are many challenges, no doubt. We need to regulate air traffic control in urban areas, check for safety and efficiency of flying vehicles and get better batteries.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: Half the battle is already won, thanks to you Elon.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: You're welcome. But you can also tell me as to how have I unknowingly helped your cause. Because I don't remember building models for flying cars at Tesla.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: The wave of awareness that Tesla created has increased acceptability of electric engines and propelled research in that direction. Great Britain has already announced that it shall ban non-electric cars by 2040.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: Yes, and the advancement in battery technology are amazing. We are moving past Lithium-Ion batteries with new algorithms which help cool the engine, reducing power consumption.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: If that happens, a battery can be charged (or refueled in this case) superfast - in less than 5 minutes perhaps. And not to say that the battery life shall be very long.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: That's the future. We have test flights commencing in 2018. By 2020, Uber Elevate Network, as the forum is called, shall start services in Texas and Dubai.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: We'll start with the basics. A simple 2x2 meter vehicle which can hold 2-5 people and travel for 40-100 km.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That's absolutely brilliant. But at your Elevate Conference last year, there were many hardware guys. I know from experience that Uber won't do hardware by itself. So who have you partnered with?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: There were many contenders - Airbus, German companies are doing a lot. But we've gone ahead with Aurora, they're currently working with US Department of Defense as well as NASA.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Francios Chopard (CEO, Starbust Venture) :</strong><br class="mob-hide"> Venture Capitalist: All the very best Uber! I'm sure you shall have a lot to share through the press releases in the coming few years.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: And all good - I hope. Tesla faced backlash when one of our test pilots died. Be careful. There are plenty of people who're calling your services a big scam. But we'll talk about that later.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Garette Camp (Founder, Uber) :</strong><br class="mob-hide"> Founder: With the community's support, we'll surely do well. Thank you.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://www.investopedia.com/articles/personal-finance/111015/story-uber.asp" target="_blank">The Uber story</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/news/uber-will-ipo-2019/" target="_blank">Uber's IPO - biggest in history</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/personal-finance/010715/key-differences-between-uber-and-lyft.asp" target="_blank">Uber vs Lyft</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/insights/051216/6-cities-battling-uber.asp" target="_blank">Cities that banned Uber</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/news/softbank-eyes-stake-uber/" target="_blank">SoftBank invests in Uber</a></p></li>
+                            <li><p><a href="http://www.businessinsider.com/how-much-money-uber-drivers-really-make-2014-7" target="_blank">Uber driver's income</a></p></li>
+                            <li><p><a href="http://www.startuptalky.com/startup/startup-story-ola/" target="_blank">Indian Competitor - Ola's story</a></p></li>
+                            <li><p><a href="https://yourstory.com/2012/10/what-makes-bhavish-of-ola-cabs-both-a-night-and-a-morning-person/" target="_blank">Ola's Founder - Bhavesh Agarwal</a></p></li>
+                            <li><p><a href="https://www.linkedin.com/pulse/ola-vs-uber-cold-war-financial-analysis-abhilekh-startup-tripathy" target="_blank">Ola vs Uber - financial analysis</a></p></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

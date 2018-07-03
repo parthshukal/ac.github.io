@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>General Electric</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 7%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 23%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/General Electric.jpg" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: I'm a banker. James Dimon is my name. Currently, I am the Chairman and CEO of the largest bank in the US - JP Morgan Chase.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Hi friends, I'm Elon Musk, and I'm excited to be back for another discussion. I'm the CEO of Tesla Motors and also co-own SpaceX, SolarCity.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: It is my vision to help people through technology. Not just the human race, but the entire planet.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Hello, I'm John Francis "Jack" Welch, Jr. or simply Jack Welch. I'm known for two things primarily: my management books, and my successful term as CEO of General Electric.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: Hello friends, my name is Kelle Louaillier, and fI'm the president of Corporate Accountability International, where we protect the world from corporate greed and abuse.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: So we have two technology guys, one banker, and a social activist. Sounds like conflict, doesn't it?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Well, conflicts are always going to be there, but they are opportunities for growth, too. In my 20 years of being the GE CEO, the company grew by 4000%.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: The foundation that GE was built on is very strong. You wouldn't be 24th in Fortune 500 or 9th most valuable brand in the world just like that.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: We need to look at the story since that's what shapes companies. Starting off with the genius founder - Thomas Edison. He was a great inventor - not just the light bulb but also the first to project a motion picture.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Oh yes, he combined a lot of different companies into General Electric. And we haven't looked back since.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: Elon, tell me something: you do know that Thomas Edison cheated Nikola Tesla, and he was so ruthless, that he didn't even flinch while electrocuting Tesla's pets.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Well, it is an open secret that money and success mattered more to Edison than science. And while JP Morgan helped him grow, JP had also deceived Tesla.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That made them the perfect partners.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: Are we here just to hurl accusations at each other? Or is anything productive going to come out of this?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Don't get me wrong James. The flourescent lamps, autopilot, refrigerator, electric toaster were all gifts from GE. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: Their voice radio broadcasting technology made Radio Corporation of America.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: We were amongst the first 12 companies to be listed on the Dow Jones Index. And a hundred years later, we are the only surviving company out of those 12.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: Of course, you know very well on how to (mis)use technology. In the 1950s, GE was the largest user of computers after the US government.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: And energy! Not only is GE into oil and gas, but they even acquired Enron's wind power assets. Enron was the only surviving manufacturer of wind turbines in the US.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: But the major reason for heir success is adaptability. After the Great Depression and resulting recession, GE was quick to get into the finance business.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Loaning out money to people to buy our own products was a good business decision. While our competitors had low sales, we earned from sales as well as interest.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: Even today, GE's largest revenue source is finance - 31%. Their market share is half of Citi, Bank of America or even JP.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: What we did after merging 28 banks over the course of 50 years is easily done by GE. That’s a huge thing.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: GE produces cutting-edge medical technology too: MRI, CT scans, X-rays and surgical machines. No wonder they have a 39% market share in this industry too.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: Why can't we see GE for what it is: a greedy corporation? Why aren't we discussing their weapons manufacturing division?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Yes, we have a weapon's division. We are one of the biggest defense contractors of the US governments. Nothing illegal there.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Illegal? Perhaps not. But we can't change the fact that your scientists and researchers had extensively contributed to developing the bombs dropped on Hiroshima and Nagasaki.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p>Moreover, in the cold war, GE promoted nuclear weapons to the US Government since they were the largest producers of nuclear weapon parts.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: It was the government's decision. The country was at constant risk of war. USA was producing 5 nuclear bombs per day.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: And they were hand in glove with the President. Ronald Raegan was a former spokesperson for GE and featured in their ads, too.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: That is a conflict of interest, I agree.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: We had set up Corporate Accountability International just to counter GE. More than 4 million Americans boycotted their products.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: I remember that the movement even spread to Canada and western Europe. GE sales had taken a hit.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: GE's advertising budget increased by 400% in this period. The boycott had cost GE over $50 million in lost medical equipment sales alone. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: They even secured a $2 billion deal with the government to supply systems in the Gulf War.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: Don’t be too skeptical. If the intentions were malicious, surely the media would have exposed them.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: They wouldn't. GE had purchased NBC and sent retired generals on air to talk about the importance of war. They praised US weaponry, which was primarily supplied by GE.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: The more they told people the war was needed, the less resistance the public had towards war. This, of course, meant more money for GE in the form of contracts.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: But just how profitable can this be? Even production costs for these systems are quite high.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Don't play stupid, James. With a single missile costing over 1 million dollars to make and with tens of thousands of missiles being fired in conflict you can only imagine how profitable war can be.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: I'm glad that NBC stake was sold off by GE. Similarly, they did stop manufacturing weapons, too.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: In April of 1993 after 7 years of boycotting the people had finally won. General Electric completely moved out of the nuclear weapons business stating that it was a business decision. But they continued to manufacture other weapons</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Just a correction: we only supply engines to the Defense Department, nothing else.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: But the bottom line is that despite shutting that down, your annual revenue is almost $150 billion and your assets are worth $650 billion.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That’s more than the GDP of Sweden or Norway or 2 times the GDP of Singapore!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: And guess who the GE CEO was in this period? Jack Welch. Not only is he blatantly unapologetic about it, but also was awarded the 'Manager of the Century' by Fortune magazine.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">James Dimon (CEO, JP Morgan) :</strong><br class="mob-hide"> Analyst: Jack has always been in the news for his lifestyle. The Securities and Exchange Commision has investigated him multiple times.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: And more importantly, he struck a deal with GE to continue using the New York house, private jet, chauffered cars and baseball tickets benefits after his retirement; over and above the $2.5 million contract.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: I think this is slowly turning from a discussion on GE to an interrogation of Jack Welch. I'll sign out.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jack Welch (ex-CEO, GE) :</strong><br class="mob-hide"> CEO: Have a good day.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Kelle Louaillier (President, CAI) :</strong><br class="mob-hide"> Regulator: Poor guy. Can't even defend himself. Anyways, it felt good to let people know the truth.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://www.investopedia.com/articles/markets/022016/general-electrics-8-most-profitable-lines-business-ge.asp">GE's business line</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=rKoxVhfomEs">https://m.youtube.com/watch?v=rKoxVhfomEs</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/markets/052016/ge-stock-capital-structure-analysis-ge.asp">Capital structure analysis</a></p></li>
+                            
+                             <li><p><a href="https://www.investopedia.com/news/could-warren-buffett-save-ge/">https://www.investopedia.com/news/could-warren-buffett-save-ge/</a></p></li>
+                             <li><p><a href="https://www.investopedia.com/insights/rise-and-fall-ge/">https://www.investopedia.com/insights/rise-and-fall-ge/</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=EMbGTi55MXI">GE commercials</a></p></li>
+
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

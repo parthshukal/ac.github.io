@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Fed Interest Rates</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 14%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Federal Reserve.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Who plays the board game 'Clue?'</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> I do. The one in which you've to guess who committed the crime, right?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Yes, you also have to guess the weapon they use, and what room of the building they committed the crime.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> But what does it have to do with the Federal Reserve (Fed)?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> Oh, I get it. We've been playing the giant game of market clue. Whatever the event at the market is, interest rates are up, interest rates are down, stock prices are up, stock prices are down, the reason is always the same.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> You get it! Don't we say 'the fed did it, with the QE, in the bond market'? Since the beginning of this decade, we've been using Fed as the defense against everything. We've been obsessed with Fed as to the reason of whatever good or bad happens, and that obsession I find unhealthy.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> I'd confess I thought along the same lines. I never thought of them as myths! I'd go on saying, I thought Fed sets the interest rates!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> I know they don't 'set' the rates as such, but I thought somehow the Fed is 'responsible' for the interest rates we see in the treasury bond market, the mortgage rates, the bank CD rates.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Not really! The majority think the Fed is the primary factor behind why interest rates have been low since the beginning of the decade. I think it's a myth.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> I'm still unsure if these are myths as you say or are they actually true. Few charter holders at my firm were discussing how Fed is boosting the stock market. They meant it is the lower rates of interest that have been responsible for stock prices going up. Companies can borrow at lower rates so will have higher profits! Since these low rates they think are 'set' by Fed, Fed boosts the stock market!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> My boss thinks along similar lines. He also says, the rates have currently been low and wouldn't be low for long! If the Fed acts and changes its interest rate policy, the biggest thing it has to fear is that stock markets will react badly.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> I agree that higher rates will make borrowing costly and eat up the profit margins of the companies, making the stock prices fall down. But the point I'm making here is that Fed could just influence one rate - the Fed fund rate - the rate at which commercial banks borrow from the central bank.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> Don't you think other rates are influenced by this rate? I think the interbank borrowing rate (the rate at which one bank would borrow from another bank) is directly affected by this.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Yes, and the interbank lending rate is the only one that has a direct connection. But do you know, it's a short-term rate, and markets are affected moreover by the long-term rates! Markets aren't concerned with what's the borrowing cost today or what it will be there next month. Valuation is done taking a longer time horizon basing the decision on what borrowing costs, returns will be over a period of time!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> Oh, it seems I missed out on the bigger picture. To clarify, I'd shoot a few questions.<br>
+1. The Fed influences the short-term rates, but the markets are affected by long-term rates. <br>
+2. Aren't the long-term rates directly affected by short-term rates? If not, then who sets them based on what?
+</p>
+</div>
+</li>
+
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> 1 - yes! 2 - long-term rates are hardly affected by the short ones. To answer the second part of your second question, let's go back to basics of economics.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> I guess Fresher is talking about the Fischer Equation. Interest rates = GDP Growth + Inflation.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> Wait a sec, I think I'm decoding this now. If I have to lend money and if the prices of the goods are rising too fast, I'd ask for a higher interest. If he's not giving me a higher return, or else I'd buy goods today, keep it for a year and sell it at a higher price! </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> Yes, and the same applies to GDP growth. Higher GDP growth means the country's growing well. When the country grows well, the businesses in the country grow well. If businesses are doing good and you're becoming a part of the growth by lending money, why would you stay behind? You would ask for a good return on your capital, too!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> It's so logical! Now if I see the rates since the beginning of the decade have been this low isn't because Fed does it, but because there's not much of GDP growth after the financial crisis nor there's enough demand for the prices to rise!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Didn't I say, fed doesn't do it! To answer the second part of the second question, it's the market that sets the long-term rate based on judgments about inflation and GDP growth.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Intern :</strong><br class="mob-hide"> We also discussed of stock markets getting a boost. Can you throw some lights on that too if it's a misconception?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> I think the answer is pretty straight-forward. US companies have been returning insane, incredible amounts of cash in the form of dividends and stock buy-backs. Part of the reason for this is, profits are at historic highs. In 2014, US companies returned about 91% of their earnings as dividends. So the high earnings plus the high cash flow returns have translated into very large cash flows for stock investors.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jenet Yellen :</strong><br class="mob-hide"> What if I give you the stats to prove the markets actually go up and down just because of Fed changes rates.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Historically, the Fed affected rates not because it sets the rates but because it has credibility backing it up. What am I talking about? When the Fed acts, the investors assume that it acts because it assumes that it sees something in the economy. It is lowering rates because it sees economic weakness. It is raising rates because it sees economic strength. So the Fed rates are nothing more to me but a signal of inflation and growth. And the Fed as long as it acts consistently will have credibility.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jenet Yellen :</strong><br class="mob-hide"> Possibly. What’s kept the Fed effective is that it has been independent and credible. And the biggest danger to the Fed is that anything that attacks that notion.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> Yes ma'am. Let me end with the story about a Rooster. The story is a several hundred years old. The Rooster essentially crows at the start of every day as the sun comes up. All the other barn-yard animals pay head to it because they think that it’s the Rooster’s crowing that is causing the sun to come up. Then one day the Rooster doesn’t crow. The sun comes up anyway. The other barn-yard animals wake up, and they realize it wasn’t the Rooster that caused the sun to come up. The Rooster lost its power on that day.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Fresher :</strong><br class="mob-hide"> Hahaha, Fed = rooster. Singing = interest rates. Sun coming up = economy picking up anyways! What the rooster should do to maintain the power: keep singing! </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Management :</strong><br class="mob-hide"> That's what even I'd suggest to Fed. *Crow (act) because irrespective of you crowing or not crowing (rates rising or rates not rising), the economy is going to pick up. But if the market gets to know the discussion happening here, Fed would lose the charm and power just like the poor rooster.</p>
+</div>
+</li>
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://www.investopedia.com/articles/investing/082113/understanding-interest-rates-nominal-real-and-effective.asp" target="_blank">Nominal vs real rates</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/investing/080713/how-banks-set-interest-rates-your-loans.asp" target="_blank">How banks fix up loan rates</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/03/111203.asp" target="_blank">Forced behind int rates</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/terms/f/fullyindexedinterestrate.asp" target="_blank">Indexed interest rates</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/bonds/09/bond-market-interest-rates.asp" target="_blank">Effect of rates on bond market</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/investing/how-interest-rates-affect-stock-market/" target="_blank">Effect of rates on stock market</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/investing/010616/impact-fed-interest-rate-hike.asp" target="_blank">Impact of rate hike by Fed</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/news/4-most-important-effects-rising-interest-rates/" target="_blank">Other effects of rising rates</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/investing/070915/how-negative-interest-rates-work.asp" target="_blank">Mystery of negative rates</a></p></li>
+
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - Aswath Damodaran</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

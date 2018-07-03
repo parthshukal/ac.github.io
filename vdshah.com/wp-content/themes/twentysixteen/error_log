@@ -1,0 +1,16 @@
+[03-Jan-2018 01:01:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php on line 10
+[11-Jan-2018 09:09:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php on line 10
+[15-Feb-2018 06:44:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/404.php on line 10
+[06-Jun-2018 10:41:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/header.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentysixteen/header.php on line 13

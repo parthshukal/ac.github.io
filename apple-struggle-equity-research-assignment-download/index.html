@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Apple Struggle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+        .chat
+    {
+        list-style: none;
+        margin: 0;
+        /*border: 1px solid #f1f1f1;*/
+        padding: 0;
+    }
+    .chat-img img{
+        display: none;
+    }
+    .chat li
+    {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .chat li.left .chat-body
+    {
+        padding: 2em;
+        padding-bottom: 0em;
+        padding-top: 0;
+    }
+    
+    .chat li.right .chat-body
+    {
+        margin-right: 60px;
+    }
+    
+    
+    .chat li .chat-body p
+    {
+        margin: 0;
+        color: #777777;
+    
+    }
+    .chat li .chat-body p:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .panel .slidedown .glyphicon, .chat .glyphicon
+    {
+        margin-right: 5px;
+    }
+    
+    /*.panel-body
+    {
+        overflow-y: scroll;
+    }*/
+    /*
+    ::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+    }*/
+    
+    
+    /**************/
+    
+    .thom{
+        color: #DB3236;
+    }
+    .ross{
+        color: #F4C20D;
+    }
+    .luca{
+        color: #0495FF;
+    }
+    .warn{
+        color: #3CBA54;
+    }
+    .firstt{
+        padding-top: 2em !important;
+    }
+    .chat-body{
+        padding: 2em;
+    }
+    button#btn-chat {
+        padding: 1.5em;
+        padding-bottom: 1em;
+    }
+    .modal-footer .input-group input#btn-input {
+        padding: 2em;
+        padding-left: 10px;
+    }
+    
+    .imp-links{
+        padding: 2em 0;
+    }
+    .links-wrapper{
+        padding-top: 2em;
+    }
+    .starter-template{
+        padding: 1em 0;
+    }
+    .demo-img {
+        margin-bottom: 2em;
+    }
+    /*.demo-img img{
+        width:50%;
+    }*/
+    .next-previous-wraper{
+        padding-top: 3em;
+    }
+    /*.demo-img:hover img{
+        opacity: 0.3;
+    }
+    .demo-img:hover .middle {
+      opacity: 1;
+    }*/
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+          top: 43%;
+        left: 25%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+    .text{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    @media(max-width:768px){
+        .demo-img img{
+        width:100%;
+    }
+    .chat li.left .chat-body{
+        padding: 0em;
+    }
+    .chat-body{
+        padding: 0em;
+    }
+    }
+    
+    /*.chat-body.clearfix strong {
+        font-size: 16px;
+    }*/
+    body{
+       font-size: 16px;
+       -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        -o-user-select: none;
+        user-select: none;
+    }
+    
+     .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+    input[type='text'] {
+        background-image: url(mic.png);
+        background-position: 99% 13px;
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+    
+    .img-logo img{
+        width: 6%;
+    }
+    .mob-hide{
+        display:none;
+    }
+    .breadcrum p{
+        font-size: 12px;
+        padding-top: 1em;
+    }
+    
+    .imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+        .img-logo img{
+    width: 23%;
+    }
+        input[type='text'] {
+        background-size: 10%;
+        }
+        .container-fluid{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .mob-hide{
+            display:block;
+        }
+        .panel-body{
+        padding: 10px 5px;
+        }
+        .breadcrum p{
+        padding-top: 2em;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+
+        <div class="modal-body">
+            <div class="panel-body">
+                <div class="img-logo text-center">
+                    <a href="../index.html"><img src="../logo1.png" alt=""></a>
+                </div>
+                <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                <ul class="chat">
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body firstt clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Hello, I'm Ken Segall. I've worked with many large companies on their marketing campaigns. You may not have heard of me, but I
+                                was the one who suggested the 'Think Different' campaign to Steve Jobs.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: Hey friends, I'm Hannah from London, UK. I love apple products, but I'm no Alex Lee - he is most passionate Apple fan. He waited
+                                32 hours in a queue for iPhone 4 and then broke his own record by standing 50 hours for iPad 2. I can't do that.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Vannakkam! I'm Sundar Pichai, the CEO at Google, wanting to push technology to all corners by overcoming borders.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: My name is Steve, and I co-founded Apple. I'm Steve Wozniak - not Jobs. It was our love and belief in technology that
+                                got Apple going, and as an engineer, I still do the same thing - create good technology.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: In our last two conversations, many persons hinted that the sun is setting on Apple. They are no longer good enough.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: As someone closely connected to Apple, I assure you - everything is good. Our numbers are at an all-time-high. The teams
+                                are working hard to deliver better stuff.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Steve, as a technology guy myself, I understand that most products that y'all created were very good and were therefore well-received
+                                by the customers. Not the same can be said about your current offerings.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Simplicity was your strength. It is now becoming your weakness.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Mr. Pichai has hit the bull's I.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: *bull's eye</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Although Apple is strong on paper and is worth more than the entire Russian Stock Market, it is falling. And the company is perhaps
+                                too blind to see this.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: Ken, when we came up 'Think Different,' it wasn't just for our sales team. Our product engineers work on the same
+                                philosophy - innovation is the cornerstone of technological development.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: You're right, but Apple doesn't come up with new technology any more!</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: We just get bigger screens and brighter displays. Smaller and slimmer products that are easy to carry but difficult to use -
+                                when you made the Macbook slimmer, you took out USB and SD card slots. That makes life difficult for us.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: "And don't forget how the headphone jack was removed from the iPhone. Utility seems to have lost focus. You're making thinner and
+                                lighter stuff at the expense of utility.This sends a bad message - this is arrogance through design."</p>
+                        </div>
+                    </li>
+
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: This isn't all. The new chargers, adapters, pencils are so difficult to connect. We need to put together a hundred things to use
+                                a simple function.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: "Everything Should Be Made as Simple as Possible, But Not Simpler" I am not saying this - Einstein said so. Apple's excessive
+                                obsession with simple, good-looking devices is restricting innovation. A very bad strategy.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Forget Einstein, I'll give you a more recent quote, "Companies forget what it means to make great products.The product genius that
+                                brought them to the very position gets rotted out by people running the company who have no conception of good product vs bad product."</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Woz, you must have surely heard this before.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: Yes, I have. These are Job's words. I know them very well.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: "Woah! That's shocking. This is exactly what he feared. Sir, Apple under Tim Cook is not the same as Apple under Steve Jobs."</p>
+                        </div>
+                    </li>
+
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: And you're missing out on basics - what pricing strategies have you adopted in this global deflation? The products simply
+                                aren't worth the money.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: Oh yes! In the UK, the 15-inch Macbook's price was suddenly raised by 700 pounds. Apple said it was due to 'Brexit.' But the
+                                Brexit hadn't even taken place then. What about your passion? Are you only looking to make money now? </p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: Hannah, dear - we have more than enough cash. Let me quantify it - we have more than 4 times the cash than the US Treasury.
+                                We can buy 80% of the S&P 500 right now. This includes Coca-Cola, Netflix, Amazon, Tesla and other giants.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: The money never mattered. I remember selling my scientific calculator for $500 to get money for Apple. Jobs sold his
+                                minivan for a little less than that. We were millionaires before 30, but we still kept going. It was for the passion of innovation.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: I'm speaking of hardcore innovation. While Apple simply came up with a touch bar on new MacBooks, Microsoft launched an entire
+                                touch-based computer! Could you throw some light on why isn't Apple coming out with something like Microsoft Surface Pro?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Woz, your statement - this is what Apple has been doing for some time now. Leaning on legacy, growth story and brand image to sell
+                                products.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: Yes, I'd love to use new products launched by Apple. There is so much happening right now - robotics, virtual reality, electric
+                                cars. As a technology company, why don't you make all these?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Perhaps you wish to retain your position as only a consumer electronics company. I'm saying this again - sit with the board
+                                and discuss your medium and long-term strategies.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: I feel as if you have pegged us for idiots, I urge you to reconsider your opinion. It is no secret that we are developing
+                                electric cars. For that matter, we had offered to purchase Tesla, but Elon Musk rejected our offer.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: There is a lot of R&D happening behind closed doors. Just because we're secretive about it doesn't mean that we aren't
+                                coming up with anything new.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: If you say so Woz. We want you to do well. Just don't make mistakes. You get your screens and chips manufactured by Samsung. You
+                                already have court cases about your Slide Unlock patent infringement.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: https://www.techdirt.com/articles/20160226/12112433725/appeals-court-dumps-apples-slide-to-unlock-patent-tosses-massive-jury-award-against-samsung-trash.shtml</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: And don't forget how courtroom dramas on new technology cost you your respect in 1997.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: I read the article briefly. It is good. But what is this 1997 court case Woz?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: We needed cash. Steve was back in the team, and he made an important, life-saving deal. We gave Microsoft $150 million
+                                of shares and agreed to make Internet Explorer the default (not the only) browser in our systems.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: We even had to drop the long-going suit on Windows copying Macintosh.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: https://www.wired.com/2009/08/dayintech_0806/</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">Hannah (British Customer) :</strong><br class="mob-hide"> User: That must be really embarrassing!</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: We did what we had to do to survive. And we are not ashamed of it, kid.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Ken Segall (Ad Guru) :</strong><br class="mob-hide"> Ad Guru: Are you ashamed of your other failures?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: Definitely not, they've made us who we are today. We have gotten back up after every fall.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Well, definitely not this one: http://www.avclub.com/article/apples-1986-clothing-line-was-glorious-trainwreck-207745</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Sundar Pichai (CEO, Google) :</strong><br class="mob-hide"> Google: Wishing you all the very best for your future projects. Let's have some healthy competition in the industry!</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+    <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+</span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Steve Wozniak (Apple-Co-founder) :</strong><br class="mob-hide"> Wozniak: Thanks. I would want to hear your comments on our future launches.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="input-group">
+                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+            </div>
+        </div>
+        <div class="imp-links">
+            <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+            <div class="links-wrapper">
+                <ul>
+                   <!-- <li><p><a href="http://www.investopedia.com/news/apple-now-bigger-these-5-things/" target="_blank">Gigantic size of the company</a></p></li>
+                    <li><p><a href="http://www.investopedia.com/articles/markets/021316/if-you-had-purchased-100-apple-2002-aapl.asp" target="_blank">Apple's stock performance analysis</a></p></li> -->
+                    <li><p><a href="http://www.investopedia.com/university/apple-porters-5-forces-analysis/" target="_blank">Porters forces</a></p></li>
+                    <li><p><a href="http://www.investopedia.com/university/apple-porters-5-forces-analysis/analyzing-apples-bargaining-supplier-power-aapl.asp" target="_blank">Bargaining power of suppliers</a></p></li>
+                    <li><p><a href="http://www.investopedia.com/university/apple-porters-5-forces-analysis/analyzing-apples-threat-new-entrants-aapl.asp" target="_blank">Threat of new entrants</a></p></li>
+                    <li><p><a href="http://www.investopedia.com/university/apple-porters-5-forces-analysis/analyzing-apples-threat-substitutes-aapl.asp" target="_blank">Threat of substitutes</a></p></li>
+                    <li><p><a href="http://www.investopedia.com/university/apple-porters-5-forces-analysis/analyzing-apples-degree-rivalry-among-competitors-aapl.asp" target="_blank">Rivalry among competitors</a></p></li>
+                    <li><p><a href="https://m.youtube.com/watch?v=xdjAX5A-6qE">Apple Music</a></p></li>
+                    <li><p><a href="https://www.inc.com/larry-kim/21-surprising-to-bizarre-facts-about-apple.html" target="_blank">Bizarre Apple facts</a></p></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- <hr style="border:1px dashed #eee;">
+        <div class="next-previous-wraper">
+            <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-5 col-xs-6">
+                    <div class="demo-img">
+                        <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-6">
+                    <div class="demo-img">
+                        <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <!-- /.container -->
+    <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+    <a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

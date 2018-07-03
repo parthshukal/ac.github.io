@@ -1,0 +1,24 @@
+[29-Dec-2017 17:49:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/404.php on line 10
+[17-Jan-2018 15:03:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/index.php on line 17
+[20-Jan-2018 23:01:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_ID() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content.php on line 13
+[15-Feb-2018 06:44:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/404.php on line 10
+[28-Jun-2018 00:42:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_ID() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content.php on line 13
+[28-Jun-2018 06:01:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_ID() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content-link.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-content/themes/twentyfifteen/content-link.php on line 13

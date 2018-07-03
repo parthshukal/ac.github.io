@@ -1,0 +1,8 @@
+[11-Jun-2018 05:18:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/plugins/hello.php on line 60
+[11-Jun-2018 05:18:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/plugins/hello.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/plugins/hello.php on line 60

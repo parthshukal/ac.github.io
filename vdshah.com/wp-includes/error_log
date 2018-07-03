@@ -1,0 +1,4 @@
+[19-Jan-2018 22:23:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/vdshah.com/wp-includes/locale.php on line 10

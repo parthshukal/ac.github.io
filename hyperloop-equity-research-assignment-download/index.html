@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Tesla - Hyperloop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 12%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Hyperloop.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP: Hello, I'm Anita Sengupta. I join the Hyperloop Leadership team after 16 years at NASA. I've worked on thrusters and Mars rover decelerators. I also happen to be a pilot, scuba diver and motorcyclist. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Hello, I am Tim Cook; the 7th CEO of Aple, Inc. I was the former COO of Steve Jobs and my vision and expertise got me compensation of 1 million shares. You may not know this, but I also serve on the board of Nike.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: Although you may know me for being the founder of Virgin Atlantic, I'm Richard Branson - the chairman of Hyperloop One. You may wonder what I'm doing here instead of Elon, but as a good friend, I'm simply doing what he asked me to - and not asking questions.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Hello, I am Elon Musk, the CEO of Tesla. There are many businesses that I own, but Tesla is my favorite. Many people call me the vision behind Tesla. I don't fully agree with them.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  Wow, this is an interesting mix - entrepreneurs, tech executives and top management. I wished to particularly ask this question to Elon about Hyperloop - why give away Hyperloop to outsiders when it was your original idea?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Anita, you're from NASA. And you understand this better than others - when a person is obsessed with breakthrough innovations, he doesn't care who launches the product as long as the tech gets upgraded and is delivered to the user.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Hence, I want to focus on Tesla and SpaceX while you, Richard and the team can build Hyperloop.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: I seem to be the odd one out here. Although we are all from the tech sector, there is difference between consumer electronics and macro technology. I don't understand what Hyperloop is? And what is my role here?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: I'll answer these questions for you, but in the reverse order. You're here because you know what people want better than the others. And as far as Hyperloop is concerned, I'll let Anita or Elon take care of it.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  Tim, Hyperloop is the fifth mode of transport - after car, train, plane and ships. It is a new transport technology which loosely looks like a train, but is faster and operates at a different scientific tangent.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  This is a tube which transport human passengers at speeds of 900-1000 kms per hour.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: The Shanghai Rail in China currently uses magnets for high-speed transport and achieves 270 miles per hour. You're going to triple that speed - how?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: By using air. Just like magnets reduce friction/resistance, we are using air (similar to air hockey) to keep a passenger capsule suspended in a tube. The tube will have near vacuum, so even the slightest air pressure can propel it at a great pace.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Okay. It sounds feasible theoretically. But what created the idea behind Hyperloop?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: It was pretty straightforward. Due to the traffic in Los Angeles, Elon was late to a meeting by 1 hour. So he does what he does best - think of a new way to move around quickly.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: In a conference in 2012, he already announced his plans. Since he didn't have the time to do it himself, he developed technology at Tesla and made it open source so that others can improve upon it.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  We organized a Hyperloop Pod Competition where 700+ student and non-student teams registered. The final shortlisted 22 teams are building hardware and shall test their models on our tracks.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: So where are these tracks? It must take a lot of open space to make this testing facility, right? Or is it all in virtual (simulation) mode right now?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: Not at all, the tracks (tubes) are up in Nevada. Our teams are in talks with 10 different govenrments to implement this. Slovakia is ready to build it in their capital city.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: That's great news. And we are pushing for it because of its many advantages. It's cheaper than airfare and twice as fast. And most importantly - it is energy efficient.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Don’t be modest Elon. The Hyperloop is designed to generate electricity through solar panels. As per our estimates, it will produce more energy than it consumes - making it a net energy creator, not a user.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Look, I understand that it is good for the environment and also fast. But as a traveler, would I be safe and comfortable in this high-speed bullet?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: What happens if we meet with an accident? It's one directional tube, right? How does help even reach us if we're at 1000kmph?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  We understand that there a few challenges and are working towards the same - including emergencies and evacuations. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP:  We've built all scenarios of earthquakes, etc. and ensuring safety at all times.    </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Richard Branson (Chairman, Hyperloop One) :</strong><br class="mob-hide"> Chairman: Tim, don't worry about the comfort. As someone in the hospitality industry, I know that it matters a lot for passengers. Google ran simulations on Hyperloop to test passenger comfort. We were shocked at the results.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: That bad, huh?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Nope, the comfort ratio of a people in turning cars is 0.8. Hyperloop provides air cushioning from all sides - hence our ratio doesn’t rise above 0.5 at any time.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: That's impressive. So you have a power generator which is changing the status quo - to ensure that there are no system malfunctions. The cost for that is very high.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP: We've taken care of all of it. In case you are interested to know more about Hyperloop, why don't you come to our test site sometime?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Anita Sengupta (SVP - Systems Engineering) :</strong><br class="mob-hide"> VP: Until then, I recommend that you read this comprehensive piece: https://www.pocket-lint.com/gadgets/news/132405-what-is-hyperloop-the-700mph-subsonic-train-explained</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Thanks a lot, Team Hyperloop - let's see if we can collaborate for passenger entertainment while zooming at speeds higher than sound! All the best.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Not so soon, Tim. You first need to explain me why does Apple deliberately make its older phones slower.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: The world has not forgiven you for that as of yet.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <!-- <li><p><a href="https://www.pocket-lint.com/gadgets/news/132405-what-is-hyperloop-the-700mph-subsonic-train-explained" target="_blank">The next big thing at 1220km/hr</a></p></li>
+                             -->
+                             <li><p><a href="https://www.pocket-lint.com/gadgets/news/132405-what-is-hyperloop-the-700mph-subsonic-train-explained">Hyper Loop</a></p></li>
+
+<li><p><a target="_blank" href="https://m.youtube.com/watch?v=mK85--PpvAY">Hyperloop Dubai</a></p></li>
+
+<li><p><a target="_blank" href="https://m.youtube.com/watch?v=FDs4Yj89icw">Hyperloop technology</a></p></li>
+
+<li><p><a target="_blank" href="https://m.youtube.com/watch?v=Pbig0S5idQw">Hyperloop US</a></p></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

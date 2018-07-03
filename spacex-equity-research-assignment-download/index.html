@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Tesla - SpaceX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 12%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/SpaceX.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: Hello, I'm Jim Cantrell. I co-founded SpaceX and was part of the core team with Elon Musk and the others. I have 25 years of experience in rocket technology, but I parted ways over ideological differences with Elon.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Hello, I am Tim Cook; the 7th CEO of Aple, Inc. I was the former COO under Steve Jobs and my vision and expertise got me compensation of 1 million shares. You may not know this, but I also serve on the board of Nike.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: You may have not heard my name before, but I'm Eddy Chan, a venture capitalist who’s invested and mentored PayPal, X. com and SpaceX; amongst others. I've practiced corporate law in Silicon Valley and am a former investment banker.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Hello, I am Elon Musk, the CEO of Tesla and SpaceX. I also happen to be the CTO. There are many businesses that I own, and Hyperloop is one of them, too. Many people call me the vision behind Tesla. I don't fully agree with them.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: So, SpaceX - the next big thing from the legendary Elon Musk. We are generally only talking about technology and consumers in this world. It feels good to talk about the outside world for a change.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Tim, it's not just me. The entire team was very passionate and motivated for this. And yes, I'm excited to talk about the outside world, too. It's very inspiring to work towards making humans an interplanetary species.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: Absolutely, we've always looked at the stars and wondered what's out there. We've explored space and now know a lot about it. But when it comes to physically going to space, there are still many challenges.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: The most depressing part of space exploration and travel is that it's still controlled by the government. Physicists and scientists can't execute their fresh ideas because of too much red-tape.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Precisely. So, we started Space Exploration Technology (SpaceX for short) in 2002. And I hadn't joined Tesla Motors until 2003. So yes, in a way, I was thinking of moving out before making this world better.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Based on what I heard, what can be said to be the purpose of SpaceX?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: When I invested in SpaceX, Elon had very arrogantly given a statement which I thought was insane. He told me 'SpaceX is created to build technology to make space travel cheaper and enable the colonization of Mars.'</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: Yes, so we started off by designing and building reusable rockets. Their travel characteristics would be similar to current commercial airlines.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Let me get this straight - a single rocket can ship out to space with cargo and passengers, re-enter earth, land back and be ready for the next flight?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: And be ready for the next flight. In just a few hours.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Is this even possible? Hollywood movies make me think otherwise. How can a single rocket be used multiple times? And if that's possible, why aren't we doing it already?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: You've got to understand the constraints here. When SpaceX approached Russian Space Program to gain access to refurbish their rocket, we were turned down three times.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: We then realized that the rocket technology we use is the same as the 1960s. If we want to change it, we've got to start from scratch.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: And there were very few people that believed in private space travel, so I had to build everything from my own pocket. Luckily, we had Eddy and others chip in because they shared our vision.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: So you did? And how much did it cost you? This is like nuclear technology - a very expensive business to be in.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: It's quite costly, actually. But in order to make it economically viable, we manufacture 80% of the parts in-house. Most of them are 3D printed. Just like Henry Ford made automobiles cheaper, we'll make Space Travel cheaper.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: But how cheap can you go? You can cut down costs by 10-20-30%, but it still costs billions in space programs, right?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: Let me put things in perspective. NASA takes anything between $100-260 million for one rocket launch. SpaceX Falcon9 takes $57 million only - that's around 1/4th of NASA's cost.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: Combine that with the fact that the rocket it reusable, so you write off costs multiple times. The fuel cost per launch is around $200,000 only.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: No wonder there's so much excitement around SpaceX. This is a quantum leap in cost savings. But we can't just be happy about reducing the costs if it isn't giving us the desired results. What are SpaceX's achievements so far?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: Let me properly list them down for you: 2008: The first privately funded liquid propelled rocket to reach space. 2010: Successfully launched orbit and recovered a spacecraft. 2012: We sent a spacecraft to the International Space Station (ISS)</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: Let me continue. I want to speak some good things about the company I invested in, too.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: 2013: We delivered a satellite beyond the orbit; we already flew to the ISS 6 times. 2015: We put 11 satellites for a customer and successfully returned the booster back to the ground.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: This didn't come without failure though. Our previous landing had failed due to a faulty steel strut.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: Jim, let bygones be bygones. Thanks to Elon's leadership we are on the right track.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: This begs the question: how does someone who supervised coders at PayPal supervise rocket scientists at SpaceX?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: It's simple. We've got to learn what we don't know. I picked up textbooks and started learning so that I can speak to the scientists.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Eddy Chan (Private Investor) :</strong><br class="mob-hide"> Investor: Elon is a smart man. In the initial days, he walked up to scientists and started quizzing them on their knowledge of expertise. Eventually, they realized that the CEO wasn't testing their knowledge, but actually learning from them. And he didn't stop until he's learnt at least 90% of what the other person knew.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Jim Cantrell (Co-Founder, SpaceX) :</strong><br class="mob-hide"> Founder: Although we parted ways because I'd doubted the future of SpaceX, I must confess. It is Elon's persistence that gets things done.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: In business circles, we often speak about the one crucial factor that's enabling all of Elon's companies to grow.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Elon Musk (CEO, Tesla) :</strong><br class="mob-hide"> Elon: It's his ability to not imagine failure. While we consider the rational possibility of failing, he is willing to try repeatedly until he succeeds.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+                    <p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://en.m.wikipedia.org/wiki/History_of_SpaceX" target="_blank">How I'll send humans to Mars - wiki </a></p></li>
+                                                        <li><p><a href="https://m.youtube.com/watch?v=IbWESZbGWCg">https://m.youtube.com/watch?v=IbWESZbGWCg</p></li></a>
+                            <li><p><a href="https://www.investopedia.com/news/how-musks-spacex-beating-boeing/">https://www.investopedia.com/news/how-musks-spacex-beating-boeing/</p></li></a>
+                            <li><p><a href="https://www.investopedia.com/news/how-spacex-reinvented-rocket-launch-industry/">https://www.investopedia.com/news/how-spacex-reinvented-rocket-launch-industry/</p></li></a>
+                            <li><p><a href="https://www.investopedia.com/news/spacex-build-mars-rocket-factory-los-angeles/">https://www.investopedia.com/news/spacex-build-mars-rocket-factory-los-angeles/</p></li></a>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

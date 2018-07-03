@@ -1,0 +1,4 @@
+[07-Jun-2018 02:48:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/bnzevv6aqkxl/public_html/pre-level-one.com/wp-content/themes/twentysixteen/header.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/pre-level-one.com/wp-content/themes/twentysixteen/header.php on line 13

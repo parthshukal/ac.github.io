@@ -1,0 +1,8 @@
+[28-Jun-2018 02:42:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_ID() in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyfifteen/content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyfifteen/content.php on line 13
+[28-Jun-2018 08:17:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_ID() in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyfifteen/content-link.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyfifteen/content-link.php on line 13

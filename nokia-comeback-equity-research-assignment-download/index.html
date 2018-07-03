@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Nokia -  Rise Again</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 12%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Nokia.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: Hello, I am Sauli Niinistö, the current president of Finland. Although I am more inclined towards politics than finance, I'll make it a point to contribute.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Hello, I am Tim Cook; the 7th CEO of Aple, Inc. I was the former COO of Steve Jobs, and my vision and expertise got me compensation of 1 million shares. You may not know this, but I also serve on the board of Nike.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Hello, Kristian Pullola here. I may have a funny name, but that hasn't deterred me from getting to the top management at Nokia. I'm with the company for almost 20 years and the CFO.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Hi, good day to everyone. I'm Dr. Oh-Hyun Kwon, the CEO of Samsung Electronics. In my career, I have been focused on creating great hardware - smaller but better.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: We have all previously discussed how Nokia rose in the phone industry and how it was at its height in 2005.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: Yes, the 1990s and early 2000s was the golden period for Nokia. But things did change once iPhone and Android entered the market.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Yes, Nokia couldn't keep up with the new consumer demand and wanted to stick to its old phone operating systems.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Samsung hence overtook Nokia as the world's largest manufacturer of phones."</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Well, the reason for the fall was internal competition amongst teams due to cost cutting, where everyone was fighting to keep their jobs.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: But more importantly, your former CEO Stephen Elop (an ex-Microsoft employee) literally sold out Nokia to Microsoft. And bit by bit, Microsoft has ensured that Nokia is a name that people don't remember.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: When Microsoft acquired Nokia's smartphone division, there was a clause that for 30-months Nokia cannot sell any phones under the brand name 'Nokia.'</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: This 30-month period has now ended, and Nokia is coming up with something new.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: I think our last discussion had ended when someone said that although the phones would be from Nokia, they technically wouldn't be Nokia phones.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: So what's going to happen? Is the manufacturing outsourced? All leading companies do that. But it doesn't mean that the phone isn't theirs.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Yes, there are a few rumors in the market that Nokia is coming back with a new range of phones in 2017. There were a lot of mistakes that we made last time. In spite of excellent hardware and camera, we lost out because of not switching to android (not providing sufficient applications)</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: So you are not going to make this mistake again. Fair enough. Shall we assume that the new Nokia phone shall be an Android device? Or would it run on your own software like Symbian - the one which you had jointly developed with Motorola?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: There are rumors of 2 phone launches - a medium budget phone and a flagship device, which shall go head to head with Samsung Galaxy 8 and even the latest iPhones.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Yes, the flagship phone has 6GB RAM and the best processor. In fact, the CPU that we're using hasn't even been released to the market yet.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Since there is no confirmed news of this, I'm taking this information with a pinch of salt. Going u against Galaxy 8? That isn't easy. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: "And going up against iPhone - impossible! Especially because the phone is not going to be Nokia's, correct?"</p>
+</div>
+</li>
+
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: Yes, it can't be Nokia's. It no longer has the manufacturing facilities to produce mobile phones, let alone on such a large scale.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: They had a few factories in Finland. Many were sold, and others shut down, moving production to foreign soil.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Then what's the plan? How will they hit the market?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Let me clear all your doubts, Mr. CEO.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: We have two partners - a brand new Finnish company named HMD Global and the Taiwanese phone manufacturer Foxconn.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: So, this is a joint venture of sorts?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Well, you can say that. HMD Global shall develop the market and sell the phones while Foxconn shall focus on the R&D and manufacturing.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: I don't understand one thing - there are plenty of experienced companies of the world that y'all could have tied up with, tens even in Finland itself. Why choose a new company like HMD?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Because HMD is Nokia.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: I'm familiar with Nokia's investments. They haven't invested, nor acquired any company called HMD. Then how can HMD be Nokia?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Fair enough, Nokia has neither invested in HMD nor has HMD invested in Nokia. The two companies have only come together to sell cell phones.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: I think you can keep the mystery aside and tell us what it is, without surprises.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: HMD has been founded by Nokia ex-employees. They had all left during the turbulence, and are now back to save Nokia.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: Do you think you're ready enough to go to the market? Its been quite long. A new generation has arisen, which doesn't have many good memories of Nokia.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Nokia is going on an all-out marketing campaign blitz. This includes contracting the largest independent advertising firm in the UK: 'Mother'.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Mother is very good. They have worked with many many big names across industries: Google, Microsoft, Coca-Cola, Ikea, etc.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: Companies often lose out because they just don't get the marketing and advertising right. Advertising campaigns must be memorable, and resonate with potential customers.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sauli Niinistö (President, Finland) :</strong><br class="mob-hide"> President: So, in effect: it is a bunch of Nokia ex-employees who've got together, formed HMD global and shall pull out Nokia from the grave; make it rise again.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Tim Cook (CEO, Apple) :</strong><br class="mob-hide"> Apple: We'll of course, see what happens but I wish them all the best.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Samsung has had a lot of success after moving to Android (although it is a pain too and we're planning to change the OS for all our phones).</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Dr. Oh-Hyun Kwon (CEO, Samsung) :</strong><br class="mob-hide"> Samsung: Let's hope that Nokia courts success, too. All the very best.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Kristian Pullola (CFO, Nokia) :</strong><br class="mob-hide"> CFO: Thank you. The entire world is waiting for the mega launch of our flagship phone.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://m.youtube.com/watch?v=EL7o9Xirbbs">Nokia Old Ad</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=e5ioO5iIM90">Nokia phones</a></p></li>
+                            <li><p><a href="https://www.theguardian.com/technology/gallery/2013/sep/03/nokia-mobile-phones-over-the-years" target="_blank">Amazing Nokia phones - history</a></p></li>
+                            <li><p><a href="http://www.telegraph.co.uk/technology/nokia/10282657/Nokia-a-timeline-in-pictures.html" target="_blank">Nokia company timeline</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=l5jNyT_dsoc">Nokia Mocks</a></p></li>
+                            <li><p><a href="https://www.newyorker.com/business/currency/where-nokia-went-wrong" target="_blank">What went wrong with Nokia</a></p></li>
+                            <li><p><a href="http://www.smh.com.au/business/microsofts-four-most-expensive-mistakes-besides-nokia-20150709-gi8kdj.html" target="_blank">Microsoft buys Nokia - mistake!</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/stock-analysis/011917/nokias-return-smartphones-starts-bang.aspx" target="_blank">Nokia's cold comeback</a></p></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

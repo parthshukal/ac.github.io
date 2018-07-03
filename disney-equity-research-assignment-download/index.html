@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Disney</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+        .chat
+    {
+        list-style: none;
+        margin: 0;
+        /*border: 1px solid #f1f1f1;*/
+        padding: 0;
+    }
+    .chat-img img{
+        display: none;
+    }
+    .chat li
+    {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .chat li.left .chat-body
+    {
+        padding: 2em;
+        padding-bottom: 0em;
+        padding-top: 0;
+    }
+    
+    .chat li.right .chat-body
+    {
+        margin-right: 60px;
+    }
+    
+    
+    .chat li .chat-body p
+    {
+        margin: 0;
+        color: #777777;
+    
+    }
+    .chat li .chat-body p:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .panel .slidedown .glyphicon, .chat .glyphicon
+    {
+        margin-right: 5px;
+    }
+    
+    /*.panel-body
+    {
+        overflow-y: scroll;
+    }*/
+    /*
+    ::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+    }*/
+    
+    
+    /**************/
+    
+    .thom{
+        color: #DB3236;
+    }
+    .ross{
+        color: #F4C20D;
+    }
+    .luca{
+        color: #0495FF;
+    }
+    .warn{
+        color: #3CBA54;
+    }
+    .firstt{
+        padding-top: 2em !important;
+    }
+    .chat-body{
+        padding: 2em;
+    }
+    button#btn-chat {
+        padding: 1.5em;
+        padding-bottom: 1em;
+    }
+    .modal-footer .input-group input#btn-input {
+        padding: 2em;
+        padding-left: 10px;
+    }
+    
+    .imp-links{
+        padding: 2em 0;
+    }
+    .links-wrapper{
+        padding-top: 2em;
+    }
+    .starter-template{
+        padding: 1em 0;
+    }
+    .demo-img {
+        margin-bottom: 2em;
+    }
+    /*.demo-img img{
+        width:50%;
+    }*/
+    .next-previous-wraper{
+        padding-top: 3em;
+    }
+    /*.demo-img:hover img{
+        opacity: 0.3;
+    }
+    .demo-img:hover .middle {
+      opacity: 1;
+    }*/
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+          top: 43%;
+        left: 25%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+    .text{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    @media(max-width:768px){
+        .demo-img img{
+        width:100%;
+    }
+    .chat li.left .chat-body{
+        padding: 0em;
+    }
+    .chat-body{
+        padding: 0em;
+    }
+    }
+    
+    /*.chat-body.clearfix strong {
+        font-size: 16px;
+    }*/
+    body{
+       font-size: 16px;
+       -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        -o-user-select: none;
+        user-select: none;
+    }
+    
+     .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+    input[type='text'] {
+        background-image: url(mic.png);
+        background-position: 99% 13px;
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+    
+    .img-logo img{
+        width: 10%;
+    }
+    .mob-hide{
+        display:none;
+    }
+    .breadcrum p{
+        font-size: 12px;
+        padding-top: 1em;
+    }
+    
+    .imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+        .img-logo img{
+    width: 40%;
+    }
+        input[type='text'] {
+        background-size: 10%;
+        }
+        .container-fluid{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .mob-hide{
+            display:block;
+        }
+        .panel-body{
+        padding: 10px 5px;
+        }
+        .breadcrum p{
+        padding-top: 2em;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+
+        <div class="modal-body">
+            <div class="panel-body">
+                <div class="img-logo text-center">
+                    <a href="../index.html"><img src="../img/3.png" alt=""></a>
+                </div>
+                <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                <ul class="chat">
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body firstt clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Good evening, as the CEO of the board of Governors of the Academy Awards/Oscars, I'm really happy that we're discussing the life
+                                and works of a great man who has contributed a lot to cinema.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Of course. All of us at Disney are really proud of Walt, and we salute him for whatever he's created throughout his lifetime.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Not just the man, but even his team. Lucas Films gave the world movies like Star World, but Walt Disney and his current
+                                team's vision and management is not much talked about.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: People outside the industry have no idea how big they are.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: Definitely. Although 21st Century and Disney are competitors, they are better than us. But unfortunately, people
+                                still just see them as a cartoon company.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: When I say Disney, some of you might think of classic cartoons & modern-day movie masterpieces, others a grand theme park
+                                or a mass media holding company and others still a man. All of you are correct.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Walt Disney was a pure genius, but the details of his life and the aspects that made him different from others are hazy to most.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: Walt was a pretty regular kid. It was only after his father got the boys in drawing lessons that he subsequently
+                                started drawing for his high school paper.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: The thing was nobody thought of him as a particularly great artist.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Don’t forget Walt decided to send some of his drawings to magazines for publication at 17 years but they were all
+                                rejected. Rejection and persistence would be all too familiar to Walt over the next few years.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Pesmen-Ruben Commercial Art Studio fired him, and his ideas at Kansas City film company were rejected by owners. So He brought
+                                a book on animation and a camera and began to start shooting his own cartoons in a shed behind his house.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: That’s when he created Laugh-O-Gram. Most people would be conservative with their first business venture, but Walt was passionate.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: He went out and spent all his investment money on hiring animators for a film called Alice's Wonderland based on the 1865
+                                novel 'Alice's Adventures in Wonderland.'</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: This project was one of the first instances of Walt’s creative genius. He took animation to another level. Unfortunately,
+                                Walt’s grand plant didn’t catch and halfway through production in 1923, the studio went into bankruptcy.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: He quoted, "it's important to have a failure when you're young." and was definitely right.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: If anyone knew not to take failure to heart, it was that man. At such a time he traveled to LA to visit his sick
+                                brother. While searching for jobs there, he asked all the big studios to take him on, and they all said no.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Walt finally got lucky when he managed to sell a half-finished version of Alice's Wonderland to a New York film distributor
+                                and founded Disney Brothers' Studio with his brother.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: That was a good beginning, wasn't it?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Don't disrespect our founder, James. You very well know that didn't work out. His new character (rabbit) Oswald was bought
+                                by Universal, and they refused to renew his contract because they already had rights.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: He did hit rock bottom, didn't he?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Yeah, and now there was just one direction to move in - ahead. When all this drama unfolded in 1928, Disney hit the jackpot
+                                when their hard work paid off in the form of a rodent.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Yeah, here comes Mickey Mouse!</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Yes, Mickey Mouse is almost 90 years old. But that wasn't his original name. Walt was going to name him 'Mortimer', but his
+                                wife suggested otherwise. Disney owes its success to that character.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: The character was definitely good, but he capitalized on a brand new technology that had just been incorporated
+                                into the film industry. Y'all very well know what it is.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Sound.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: At that point in time, there were no dubbing-like techniques. People wouldn't have been able to comprehend that an animated character
+                                can whistle, sing and have corresponding sounds on film. </p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: Not to forget his strategy - until 1935, only he had rights to use technicolor in animation films. That gave Disney
+                                quite a lead.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: He was able to create Snow White at the cost of whopping 1.5 million dollars.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: After Snow White came many meticulously animated masterpieces like Pinocchio, Fantasia, and Bambi.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Audiences often underestimate the budget and efforts that go into animated films. 'Tangled' was more expensive than
+                                'Avatar.'</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: The genius of Walt game out in 1950, when he moved into creating amusement parks. Traditionally amusement parks were only
+                                for children leaving tag alone parents with nothing to do. Disney envisioned a place where both children and parents could share fun experiences together.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: He was at a Copenhagen-based park when he thought of venturing into this business. And he was so impressed with the design and
+                                layout, that he incorporated the good designs.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Not just goo, the designs are great! At Disneyland, it is so very well planned that dustbins are placed at an optimum
+                                distance from hot dog carts, at the average number of steps it takes a person to finish a hot dog!</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Walt was a perfectionist and often stern with his staff. ‘Man in the forest’ was a code used by animators to warn colleagues
+                                to get back to work when Walt Disney was coming down the hallway.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: In fact, Walt Disney actually decided to do the voice of Mickey Mouse himself because he couldn't find anyone else
+                                to do it the way he imagined, in 1929 Mickey was the first animated character to ever talk his first words, ‘hot dog’.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: The full history can be found here: https://thewaltdisneycompany.com/about/</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: But all his hard work paid off, didn't it?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Definitely, today we earn more through our amusement parks than through films. Our parks are spread across continents, and
+                                the sheer size is overwhelming.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: I remember a few Disney employees boasting how Disneyland in Florida covers 43 square miles and is the size of
+                                San Fransisco, twice the size of Manhattan.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Every year the park finds an average of 6,00 cell phones 3500 digital cameras and 18,000 hats. Since 1971 1.6 million pairs
+                                of sunglasses have been lost.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Those are big numbers. Did that attract Steve Jobs to you? You even flew your flag at half mast as a sign of respect when he
+                                passed away.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: Well, big money always attracted Steve. He was the largest individual shareholder in Disney at 7% stake. His Pixar
+                                connection drew him here.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Speaking of Pixar, Robert; don't you own it, just like Lucas Films?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Kathleen, don't forget - Disney owns Marvel and Pixar, ABC, ESPN, A&E, lifetime, the History Channel and the YouTube multi-channel
+                                Network maker studios.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: That's too much power in one hand. Is it right? Or is it dangerous?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: It is what it is. Disney made 52.46 billion dollars in revenue with a net income of 8.38 Billion and currently owns 88 billion
+                                dollars in assets. The number of employees 180,000.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: I'm sorry James, we can't apologize for being large and profitable.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Robert, there is nothing to apologize for. Walt had been nominated for Oscars every year and is the person with the highest
+                                number of Academy Awards to his name.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: That man was appointed to produce the opening and closing ceremonies of 1960 Winter Olympics. It is just fair that his legacy
+                                continues.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="thom primary-font">James Murdoch (CEO, 21st Century) :</strong><br class="mob-hide"> 21 Century: And what about the fact that Disney is the 2nd largest buyer of explosives in America?</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: Oh, that's for the fireworks at the parks. I've been to Disney World. It is the size of a city! It is said that we'll
+                                take 68 years if we want to sleep in every room there.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: It is but obvious that a lot of fireworks are required to light up the night sky there.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="warn primary-font">Dawn Hudson (CEO, Oscars) :</strong><br class="mob-hide"> Oscar: Just like the sky, even the future of Walt Disney group is bright. All the very best for all your upcoming projects. Keep entertaining
+                                us with great cinema.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="ross primary-font">Robert Iger (CEO, Walt Disney) :</strong><br class="mob-hide"> CEO: Thank you, Dawn, we'll strive our best to live up to your expectations.</p>
+                        </div>
+                    </li>
+
+                    <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+
+                            </div>
+                            <p><strong class="luca primary-font">Kathleen Kennedy (CEO, Lucas Films) :</strong><br class="mob-hide"> Lucas: There is surely a lot that can be learnt from him.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="input-group">
+                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+            </div>
+        </div>
+        <div class="imp-links">
+            <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+            <div class="links-wrapper">
+                <ul>
+                    <li>
+                        <p><a href="https://m.youtube.com/watch?v=K3wXQcWyVTA" target="_blank">Disney opening</a></p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.dukeinvestmentclub.com/disney_iclub_presentation.pdfuploads/7/0/7/6/7076327/" target="_blank">http://www.dukeinvestmentclub.com/disney_iclub_presentation.pdfuploads/7/0/7/6/7076327/</a></p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.investopedia.com/articles/financial-theory/11/walt-disney-entertainment-to-empire.asp" target="_blank">Building the entertainment empire</a></p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.citi.columbia.edu/B8210/read28a/disney.pdf" target="_blank">The Columbia's report</a></p>
+                    </li>
+                    <li><p><a href="https://m.youtube.com/watch?v=JGxUgt4jYC8">Disney top rides</a></p></li>
+                    <li>
+                        <p><a href="http://www.investopedia.com/articles/insights/072416/disney-6-secrets-you-didnt-know-dis.asp" target="_blank">Disney's secrets</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.strategicmanagementinsight.com/swot-analyses/walt-disney-swot-analysis.html" target="_blank">SWOT Analysis</a></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- <hr style="border:1px dashed #eee;">
+        <div class="next-previous-wraper">
+            <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-5 col-xs-6">
+                    <div class="demo-img">
+                        <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-6">
+                    <div class="demo-img">
+                        <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <!-- /.container -->
+     <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+    <a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

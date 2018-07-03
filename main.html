@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Chat Room</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+a{
+word-wrap: break-word;
+}
+input[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 6%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 20%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="index.html"><img src="logo.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst:  Hi, I'm Ross Seymore, a technology analyst at Deutche Bank. My ratings have a 75% positive rate and average returns on them is 23%. CNBC listed me as one of the top 10 tech analysts on Wall Street.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: Hello friends, my name is Thomas Farley and I am the current President of the NYSE (New York Strock Exchange). For that matter, I am a proponent that our equity trading floor should continue the way it is. You may be amazed to know that I have a CFA certification myself.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO:  Luca Maestri here. After Nokia and Xerox, I've been welcomed as the CFO at Apple, Inc. and I report to Tim and the board on all matters of finance and accounts.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru:  Warren Buffettt, my name is. I founded Berkshire Hathaway, an international holding company in 1970. Today, each of our equity share is worth $262,000 or Rs. 1.75 crore. We invest to create value, not to make money.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO:  Warren, it's really great to have you here and get your opinion on Apple and its valuation. I'm really excited to hear your comments and get a perspective on what experts feel about us.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: You're absolutely true Luca. NYSE has 2,800 listed securities but both Apple and Berkshire are very close to the investor's hearts.</p>
+                                <p>I personally follow the Apple stock closely and have a lot to contribute.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: Oh definitely, Apple is such a big brand and its balancesheet is really different from what we analysts usually see. There are many observations that I have made. And since the biggest value investor is with us, it is best if we talk about Apple's equity valuations.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO: You see, I'm relatively new to the family but what drew me to Apple in the first place is the legacy, the growth story and the passion of the founders which still fuels innovation.</p>
+                                <p>The reason for our financial success isn’t our operating efficiency, but the belief that our internal and external stakeholders have in us.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: But Luca, how do you think will you ustain this growth? You're already the biggest company in the world and getting revenues at $50 billion. A small puppy can grow quickly to a large dog, but it is practically impossible to enlarge an elephant further.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: Luca, Ross is right here. There have been serious concerns in the market about your growth, especially after Steve's tragedy. The reports simply suggest that your annual growth rate shall only be 1.5%</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru: But they still exceeded expectations and posted a 3% growth, didn't they?</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: That seems to be a one-time thing. I'm looking at the fundamentals here. 75% of revenues come from a single product - the iPhone. This dependancy on one line is quite dangerous.</p>
+                            </div>
+                        </li>
+
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: Strategy apart - look at the reality, Apple's stock like most other tech firms is overvalued.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru: The world knows that we didn't invest in technology stocks earlier. But we still made an exception and put in $1 billion in Apple. We target consistent growth.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO: Apple's share is currently trading at $140. And it derives its value from our free cash reserves.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: Of course yes. Your $250 billion cash reserves are more than sufficient to buy 400 out of the S&P 500 companies. But we haven't seen you buy Coca-Cola, Tesla, Amazon, etc.</p>
+                                <p>Instead of giving out more dividends to shareholders, you're simply accumulating/retaining most of your profits.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: You didn't even give out dividends before a few years!</p>
+                                <p>And even after the buy-backs over the years, you've only been able to spend $183 billion. The bottomline is: you have more cash than you need. You're a cash cow. And that is leading to inefficiences.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO: I do understand that most anaysts are valuing our share at $125-$130.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru: Some of our valuation models also gave us bad data. We factored in that Samsung is rapidly eating away your product margins to 30% (which may also become 25% in the near future), and the fact that you've become mature enough to not grow at the same rate.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: And tax! Apple is paying a lot of tax, almost 26% of total revenues. How would you be able to grow with the market, the competitors and the regulator against you?</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: I have been a user of its products since 1981, and partly because I’m fascinated by it as an investor.</p>
+                                <p>But does that change the fact that you've saturated?</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru: A few years ago, we had valued it at $129 while the market dropped to $94. But our projections haven't changed. Apple is still undervalued and shall continue to grow.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: My only question is: how? Look at the capital structure. The long-term borrowings are almost $100 billion while their market cap is many times more.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO: "Ross, if you're suggesting that we borrow more and take leverage, that isn't what our philosophy is.
+									In the near future, there aren't going to be any major changes in the capital structure."</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: So shall we assume that Apple is assuming that their stock is undervalued, too? Because every quarter, the analyst reports suggest otherwise.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="luca primary-font">Luca Maestri (CFO, Apple) :</strong><br class="mob-hide"> CFO: Why are the future projects being ignored? Our electric car, renewable energy and artifical intelligence are very promising.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="warn primary-font">Warren Buffett (Investment Guru) :</strong><br class="mob-hide"> Guru: Not to forget that they also have the financial cushion to fall back on if they fail. Why is it so hard to see? It is a safe investment.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: We can't build a reputation on what we are going to do. As professionals, we are looking at numbers right now, and we don't see them justifying your statements.</p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+                                <p><strong class="thom primary-font">Thomas Farley (President, NYSE) :</strong><br class="mob-hide"> President: Either way genmtlemen, we can only let the market and time prove us correct or incorrect.</p>
+                            </div>
+                        </li>
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://parthshukal.github.io/demo/main.html" target="_blank">parthshukal.github.io/demo/main.html: </a></p></li>
+                            <li><p><a href="https://parthshukal.github.io/demo/main.html" target="_blank">parthshukal.github.io/demo/main.html: </a></p></li>
+                            <li><p><a href="https://parthshukal.github.io/demo/main.html" target="_blank">parthshukal.github.io/demo/main.html: </a></p></li>
+                            <li><p><a href="https://parthshukal.github.io/demo/main.html" target="_blank">parthshukal.github.io/demo/main.html: </a></p></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="index.html" class=" pull-right"><img src="img/Icon-2.png" alt="">Home</a>
+</div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

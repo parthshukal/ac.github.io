@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Amazon</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 10%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/4.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Vannakkam! I'm Sundar Pichai, the CEO at Google, wanting to push technology to all corners by overcoming borders and an expert in the online space (obviously!)</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: I'm MacKenzie Bezos, wife to Jeff Bezos and a co-founder of Amazon. I'm also an author and excited to be a part of this conversation.            </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: David Shaw here, I own a Hedge Fund D.E. Shaw & Co. (where Jeff Bezos worked) and also happen to have a Ph.D. from Stanford University.     </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: Hello, I'm Jack Ma, the founder, and owner of Alibaba. com. After a life of struggles, I've finally run the most successful e-commerce venture in China.  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Wow, its good to have people with both knowledge and experience in this discussion. Today, we want to talk about the company where powerpoint presentations are banned.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: Banning an MS Office office software - that can only be Apple!    </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Unfortunately, you're wrong Jack. I'm talking about your biggest competitor - amazon.com. We might perhaps not know how big they really are.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: Amazon had humble beginnings. I was discussing the potential of the internet as an 'information superhighway' with him when the idea of a web-based store having infinite products came up. He soon left and founded a company.     </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: But its quite unconventional. While most American tech innovation was happening in Silicon Valley, you were on the other side of the country in Seattle.  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: That's where we lived. It started in our family garage. We had taken a loan from Jeff's parents to start up the business. We gave it the name cadabra.com, like abracadabra! But our lawyer thought it to be cadaver (corpse), hence we named it as Amazon.          </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: It was quite a right choice. Amazon is the biggest river, and you had set out to be the biggest player in the e-commerce space. It also did help that in the early 1990s, websites were listed alphabetically. So having a name starting with A is always preferable.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: Cadaver! Hahaha! But I'm curious, what product did you start with? And what about logistics?  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: We made a list of 20 most common transported items in the US Mail Service, and finally narrowed down to books.           </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: I think when they started, they only had a million books listed on the website, but only 2000 in stock. Most goods were procured after orders were received.        </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: We didn't have staff back then. We packaged and mailed the books via post ourselves. Within 1 month we had already shipped stuff to 45 countries.            </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: But you grew fast. You incorporated in 1994 and already had an IPO in 1997. Jeff was already the Time Person of the Year in 1999.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: I think the entire internet industry was booming until the 2000s. Alibaba was able to raise $25 million in funding, even from big names like Goldman Sachs.   </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: Our motto in the initial stage was GET BIG FAST. So we bought IMDB, Teleport and Book Pages as well.         </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: Jeff had the vision to expand into different product lines. But even he had not anticipated what was yet to come.       </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: He had informed investors that by 2000, they would make $74 million in revenues if things went well, and $144 million if they went really well.     </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: And how much revenue did they actually end up generating?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: 1.6 billion dollars - 11 times of our most optimistic estimates. We even posted a first profit of $5 million in 2001.            </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: But after the dot-com bubble burst of 2001, all internet stocks lost a lot of value. Amazon's stock dropped from 107 to 7 dollars.    </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Oh yes, many of your subsidiaries even went under. How did you come out of this?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: Jeff had taken the tough call to fire 1300 employees. A distribution facility was shut down. He is very driven and focused like that. Business is always on his mind.       </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: We recovered by 2003, but developed a software development center, Amazon Prime, and a jewelry line. Soon we bought a clothing website, a grocery store and launched Kindle.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Kindle - fancy name. How did you come to this name?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: It was originally called Fiona, but later renamed to kindle.         </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: But their most successful business was launched in this phase - Cloud Computing. Today, Amazon gives computing services to Netflix, Dropbox, Tinder, and even the CIA! It is a cheap service generating a lot of profits for them.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: Amazon is too big. There was a time where y'all sold 300 products were second! In 2013, when your servers crashed for 49 minutes, the estimated loss of revenues was $5.7 million </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Just imagine the number of people required to manage these orders! Your official employee count is over 240,000 - four times that of Google. </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: Don't forget, MacKenzie and Jeff have to get in another 80,000 workers during the holiday season to manage the surge in business. Their 'Fulfilment Centres' are giant warehouses - each the size of 10,000 Olympic swimming pools!     </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: How is it possible to manage the stock/inventory then?    </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: I think that each warehouse employee walks an approximate distance of 11 miles in every shift. That's 17.7 kilometers!</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: Our staff goes and stocks the product themselves. But in order to make the picking easier, we use robots that bring the entire shelf to the picker packaging the box. We acquired Kiva, a robotics company to make this task cheaper.            </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: And now you even have a fleet of cargo planes to handle quick delivery of the 350 million products that you sell. And if you're in America, Europe or Israel; a drone can deliver your package within 60 minutes, too.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: That's so cool!     </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: They handle 7.2% of world's total retail, experts estimate that it shall grow at 28% every year.  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Their revenues are more than Google, or even Microsoft! Jeff Bezos is worth $70 billion, amongst the top 10 richest in the world. He recently even bought the newspaper Washington Post with some of his money.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: But all this has come after years of hard work. We believe in running a cost-efficient business. Right from the beginning, we never purchased tables. We purchase cheap doors, convert them into tables/desks and still have a desk-creation competition every year at Amazon.           </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: But this cost-cutting couldn't save you from the Barners & Nobles lawsuit, could it?  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: I really don't feel that their claim was justified. Barnes and Nobles was the bookstore where the Amazon team meant early on to discuss their plans. And one fine day, they sued Amazon for using the tagline 'World's largest bookstore.'      </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Yeah, they said that an internet selling does not make a 'bookstore'. I remember that y'all quietly settled the matter out of court.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: But there is something else which is unsettling. About Rufus. </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: Hahaha! There is nothing unsettling there. Rufus was a dog at Amazon. He came to the office daily, attended meetings. We were all fond of him and he became our mascot. As a good luck charm, he always put his paw on the keyboard when we launched new products.           </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: But doesn't Amazon have the same love for its employees which it displayed for its dog? There have been multiple instances of employees complaining.  </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">David Shaw :</strong><br class="mob-hide"> D. E. Shaw: Amazon was founded with a philosophy to serve customers. Hence it always prioritizes needs of the customers before needs of the employees.      </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: Every employee has to mandatorily spend two days at the customer service desk to understand firsthand what problems they face.           </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Sundar Pichai :</strong><br class="mob-hide"> Google: Let's hope that this philosophy takes you a long way. With developing markets gradually getting bigger, there is great potential for both Amazon and Alibaba to service customers worldwide.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Jack Ma :</strong><br class="mob-hide"> Alibaba: Thank you, Sundar.    </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">MacKenzie Bezos :</strong><br class="mob-hide"> Wife: Thanks, it was good talking to you.          </p>
+</div>
+</li>
+
+
+
+
+                        
+
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://m.youtube.com/watch?v=zdbumR6Bhd8">Go store</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/personal-finance/052015/how-amazon-fresh-works.asp">How Amazon Fresh Works</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/news/5-companies-amazon-killing/">9 Companies Amazon Is Killing</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=qRQwkJLRfWw">Amazon warehouse</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=dAXdeqcHBp4">Amazon process</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/insights/072316/amazon-10-secrets-you-didnt-know-amzn.asp">Amazon: 10 Secrets You Didn't Know (AMZN)</a></p></li>
+                            <li><p><a href="https://www.biography.com/people/jeff-bezos-9542209">Biography Jeff Bezos</a></p></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

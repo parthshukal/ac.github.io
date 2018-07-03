@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Facebook- How big it is</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 12%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Facebook.jpg" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: Hi, I'm Ross Seymore, a technology analyst at Deutsche Bank. My ratings have a 75% positive rate and average returns on them is 23%. CNBC listed me as one of the top 10 tech analysts on Wall Street.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Hello, I'm Ruth Porat the current CFO of Alphabet Inc. I've put years of experience at Wall Street to application at Google to bring about financial discipline at Alphabet.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: Hi, Even Williams here. I am a programmer turned internet entrepreneur. I coined the word 'blogger' and have been the former Chairman and CEO of Twiter.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Sheryl Sandberg - you've probably heard of me. I was the first female board member at Facebook; the current COO. Before this, I was at Google and helped set up their philanthropic arm.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Sheryl, do give my sincere congratulations to Mark. You guys at Facebook have been killin' it quarter after quarter, exceeding all market expectations of users, revenue and growth rates.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Thank you so much, Ruth, that's very kind of you. People love us, and we are glad for that.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: I come from a social media background, too. But Facebook's growth is unprecedented. Did Mark ever imagine that we reach this stage?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Of course not, entrepreneurs often set out to do one thing, but end up creating something bigger and better. When Amazon started, Jeff Bezos dreamed of being big enough to purchase a forklift. Today, they run 50% of world's internet data.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: A few days ago, I found old records of Mark's videos from 2005. He was giving an interview on what Facebook is, and he said that it was a good product for college directory.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Exactly, Larry and Sergei must have never imagined that creating Google would change the world. But we need to quantify this impact.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Let me give you numbers on how big Facebook really is. We have more than 2 billion active users per month and 1.3 billion unique users per day. Every 20 minutes, 1 million links are shared, 2 million friends are requested, 3 million messages sent.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Since we started off, there have been 100 billion friend connections, 250 billion photos, and 1.3 trillion likes.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: 1.3 trillion? That is 1,300,000,000,000. If Facebook were a country, it would easily throw over half of the other world.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: I'm not impressed by Facebook's size to grow and be big, I'm impressed by their efficiency to stay big. They handle so much data, are usually under hacking attacks at least 600,000 times every day and yet have their data centers running fine.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: It's pretty complicated actually. Our data center is nothing short of an engineering marvel. It is larger than the combined size of 3 football fields!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: There's 21 million feet of cable running between 60,000 servers. And each of them is 500 terabytes of storage.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: 500 terabytes is 130 billion times the capacity of the first personal computer. If you have this processing capacity, what is the daily data flow in your systems?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: "I'll answer that. In a day, a hundred petabytes of photos and videos flow through them. Evan, 1 perabyte = 100,000 gigabytes."</p>
+</div>
+</li>
+
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: That's absolutely massive. I wonder how much does that equipment cost y'all... </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Initially, we used to pay $3,000 a month on hosting costs alone. In 2017, it has drastically increased to $10 million per month.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: "Then they better be exceptionally good.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: At Google, we use many sophisticated systems to prevent crashes. What are the security protocols taken to ensure that there is no glitch in case of power failures?"</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Although power failures are a rarity, we have 14 backup generators to address the problem. We have to be particularly careful about this because every minute of outage costs us $24,420.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Oh yes, the 19-minute pause in 2014 cost you over $500,000.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: Although it is the second biggest company on the internet after Google and just ahead of YouTube, it is estimated that Facebook will lose 80% of its user base by 2018.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: It was also predicted that the world was going to end in 2012. Let the numbers and growth prove me wrong. And the chances of Facebook failing are quite slim because of their diversification.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: Absolutely true. Although I'm a competitor, I agree that its Facebook which gave rise to social media marketing as a concept.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: Ross, you're an analyst. Why don't you look at our strategic acquisitions? Messenger, Instagram and now WhatsApp. The sheer time that users spend with us is mind-blowing.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: If we're talking of acquisitions, don't forget Oculus VR. I wonder what a social connecting platform will do with media technology.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Mark had answered that in his presentation once. His point seemed right - users have grown from text to photos to video. They need something different to evolve with. And 3D technology with VR and AR will precisely contribute to that.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: But the technology has to reach users, too. Majority of China is blocked from using Facebook. That means a lot of potential customers lost. And in middle east, Vietnam, Iran, and India, Facebook remains shut in parts during protests.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: We still have a lot of stuff happening for the rest of the world. With internet.org, we want to give free internet to the world. While Elon Musk wants to build a network of 4000 satellites to do that, we use drones as big as a 747 to achieve our goal.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: We bought a company specializing in high-altitude solar-powered unmanned vehicles for the same.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: You're large enough to do what you want and buy what you want. I remember 2006 when Yahoo made an offer of $1 billion, and Mark turned them down.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: But the inside news is: had it been 1.1 billion, the board would have forced Mark to accept the offer.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: They’ve come a long way. Facebook is the 4th most valuable brand in the word. Their worth is a billion multiplied many times by hundred.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: Definitely. I put the net worth of Facebook at $425 billion.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: That's quite generous of you. </p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: Well, it's more than generous. This is more than value of eBay, Yahoo, Netflix, LinkedIn, AOL and Pandora combined!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Evan Williams (Former CEO, Twitter) :</strong><br class="mob-hide"> Twitter: But what you do with this value is very important. I'm sad that privacy is a big issue with all Facebook-owned companies. 160,000 accounts are compromised daily.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: That's true. Moreover, Facebook usage is increasing mental illnesses in users. You have to take enough steps to ensure that your footprints aren't stained with blood.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Sheryl Sandberg (COO, Facebook) :</strong><br class="mob-hide"> COO: "We've tried to do our best, investing whatever is possible into security and better user experience and satisfaction. You may not know, but Mark Zuckerberg is the lowest paid employee in Facebook. He only takes $1 as annual salary."</p>
+</div>
+</li>
+
+
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Ruth Porat (CFO, Alphabet) :</strong><br class="mob-hide"> Google: Impressive again. Google founders and CEO of HP do the same. But please understand - people come first, profits come later.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Ross Seymore (Analyst, Deutsche Bank) :</strong><br class="mob-hide"> Analyst: We'll leave you with that food of thought. Let your creation not kill human empathy.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="https://m.youtube.com/watch?v=FIh5XCdjYZg">Ad Board</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=-3Rt2_9d7Jg">Classroom</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=B28el9aEDco">Court</a></p></li>
+                            <li><p><a href="http://www.biography.com/people/mark-zuckerberg-507402" target="_blank">Mark Zuckerberg's Biography</a></p></li>
+                            <li><p><a href="https://m.youtube.com/watch?v=GpLGLyag9P4" target="_blank">Mark Zuck Body language video</a></p></li>
+                            <li><p><a href="https://www.jefferies.com/CMSFiles/Jefferies.com/files/Insights/VideoAdsInstagram.pdf" target="_blank">Equity research report by Jefferies</a></p></li>
+                            <li><p><a href="https://www.strategicmanagementinsight.com/swot-analyses/facebook-swot-analysis.html" target="_blank">FaceBook's SWOT analysis</a></p></li>
+                            <li><p><a href="https://www.google.co.in/amp/s/www.yahoo.com/amphtml/news/how-does-facebook-make-money.html" target="_blank">FaceBook's ad - business model</a></p></li>
+                            <li><p><a href="http://www.investopedia.com/articles/personal-finance/051815/top-11-companies-owned-facebook.asp" target="_blank">Companies FaceBook's acquired</a></p></li>
+                            <li><p><a href="https://www.linkedin.com/pulse/facebook-acquisition-whatsapp-case-study-peter-kovac" target="_blank">WhatsApp acquisition</a></p></li>
+                            <li><p><a href="http://www.investopedia.com/articles/investing/102615/story-instagram-rise-1-photo0sharing-app.asp" target="_blank">The Instagram story</a></p></li>
+                            <li><p><a href="http://www.investopedia.com/articles/personal-finance/030915/how-instagram-makes-money.asp" target="_blank">Insta's business model</a></p></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

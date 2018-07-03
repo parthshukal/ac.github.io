@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Tech Life Cycle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.law{
+    color: #FF9104;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 10%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Tech.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> Company is born out of an idea. The idea becomes a product, the product becomes successful, and that success allows the company to grow and eventually hit maturity. After the period of maturity, the company declines.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> All that you say is true provided that the company does make it through those significant transitions!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> That's true but those who pass the test grow faster than any typical non-tech company which takes years or even decades to build up.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> But the decline is too speedy than other companies, too. What goes up quick, comes down quicker! The mortality rate is much higher with tech companies.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> It is, but we've seen companies whose mature phase have lasted for decades.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> Hold on, y'all have reached the maturity, but I'm wondering why is it so easy for a company to start up?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> Quite a few reasons. Fewer the restrictions on entry make it easier to enter the business. The investment is low.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> Investment is low at the start, but when you've to scale up, money is needed! But when it is needed, the access to capital is getting easier day by day.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> And scaling up is easier in industries where customers are willing to switch away from existing products. You've no incremental costs neither you've any strings attached. Let's face it, it's moreover like an interface.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> Oh, I think that's easier said than done but say you grow, you mature, but someone here mentioned many companies decline quick.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> The reasons are same for companies to grow. If for competitors - it's easier to enter, easier to scale up, your decline starts!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> Yes, & once you decline, what starts is the liquidation game. A tech company hardly has any physical assets & all the intangibles - their value is just on paper. No one's going to pay for them. Basically, there's not much left.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> I see. But what makes a tech company so different from a non-tech company? I get the fact about the assets, but I'm sure there's more to it.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> I think before you'll embark on that, one should also draw a line between tech companies and non-tech companies. I feel the classification 'tech' has been much more casual.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> So let's go back to simpler times. When the tech sector first started to grow, technology companies were defined as products and services related to computers - either personal or business computers.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> So the Apple, the Microsoft were clearly technological companies. The grandfather companies were IBM, HP and the rest of the market was non-tech, right?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> Correct, that was an easy distinction. But things are different now. Now almost every product that we use almost has a computer component whether its appliance to an automobile. This distinction is difficult to make.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> Yes, it's a difficult distinction to make - if not with the majority companies but with many of them. Facebook and Google are clearly tech companies. A restaurant chain is clearly a non-tech company. But Tesla and Ford are companies that rely on technology for an automobile.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> Tesla is obviously more tech than Ford because its automobile depends a lot more on technologies than typical a Ford automobile does.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> For the past few years I've been keeping track of Amazon. About half the investment banks look at Amazon as a retail company and the other half as a technology company. The same thing seems to be happening with Netflix.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> What difference does it make in valuation?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> Yes, how we price the companies depends on who these companies are we comparing to. If I compare Tesla with an automobile company, it is very difficult to justify its price - it looks awfully overpriced. If I think of Tesla as technology company, it is easier to justify its price.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> No wonder everyone wants to be a tech company. So, as an analyst, how do I do it the classification? Some litmus tests you techies could give me to use so making money is easier the other time?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> To me, these are the business where entry is easy and unchecked, they are not regulated because you don’t need much investment to grow.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> And once you grow, holding on to these businesses is tough as you don’t stay as mature for very long. Your competitive advantages tend to be slippery, they don’t last very long.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Analyst :</strong><br class="mob-hide"> And once the decline starts, not only its hard to stop but the decline is very quick. You go from a big company to a small company in no time at all. And finally, when the game is over there is not much left to sell. Your physical assets are non-existent and your intangibles that you count, to attach a number to - nobody wants it anymore.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> So these would help me in figuring out a company that's gonna do the disruption the next time!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> It shouldn't be assumed that every tech company is going to disrupt the market. To me, disruption is more likely when a tech company introduces a tech business model into a non-tech business. A tech life cycle into a company which is used to the non-tech life cycle.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> That's a unique combination, but why so?</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> Well, the consequences are not surprising. The companies in the non-tech life cycle, especially the mature life are not used to moving quickly. So when the tech company comes in these old businesses, companies tend to move too slowly and don’t respond appropriately to the challenges that come. By the time they recognize this problem its too late.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Vice President :</strong><br class="mob-hide"> I could relate this to Uber in the car serving space. The old players looked back at the regulators and rule makers to protect them, but that doesn’t solve their problem.</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Student :</strong><br class="mob-hide"> Thanks for the valuable advice. I'm closer to my multi-billion idea!</p>
+</div>
+</li>
+
+<li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body  clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Senior Executive :</strong><br class="mob-hide"> *Caution* it is true that you would be able to disrupt the old business companies fairly easily if things worked as planned. Disruption is easy, but making money on disruption is much more difficult. Never forget that unless you change the nature of the business model, you too are going to be susceptible to competition just around the corner.</p>
+</div>
+</li>
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="../tech-investor-equity-research-assignment-download/index.html">What comes under tech sector?</a></p></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+              
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - Aswath Damodaran</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

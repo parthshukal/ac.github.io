@@ -1,0 +1,4 @@
+[06-Jun-2018 17:04:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/bnzevv6aqkxl/public_html/pre-level-one.com/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/pre-level-one.com/wp-includes/theme-compat/embed-content.php on line 13

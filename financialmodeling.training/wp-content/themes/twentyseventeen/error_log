@@ -1,0 +1,8 @@
+[03-Feb-2018 00:44:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/bnzevv6aqkxl/public_html/financialmodeling.training/wp-content/themes/twentyseventeen/footer.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/financialmodeling.training/wp-content/themes/twentyseventeen/footer.php on line 22
+[03-Feb-2018 00:44:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/bnzevv6aqkxl/public_html/financialmodeling.training/wp-content/themes/twentyseventeen/footer.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/financialmodeling.training/wp-content/themes/twentyseventeen/footer.php on line 22

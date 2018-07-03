@@ -1,0 +1,4 @@
+[11-Jun-2018 22:47:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/bnzevv6aqkxl/public_html/flashcard.store/wp-content/themes/twentyseventeen/404.php on line 13

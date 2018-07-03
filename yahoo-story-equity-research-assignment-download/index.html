@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Yahoo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    	.chat
+{
+    list-style: none;
+    margin: 0;
+    /*border: 1px solid #f1f1f1;*/
+    padding: 0;
+}
+.chat-img img{
+	display: none;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.chat li.left .chat-body
+{
+    padding: 2em;
+    padding-bottom: 0em;
+	padding-top: 0;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+
+}
+.chat li .chat-body p:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+/*.panel-body
+{
+    overflow-y: scroll;
+}*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}*/
+
+
+/**************/
+
+.thom{
+	color: #DB3236;
+}
+.ross{
+	color: #F4C20D;
+}
+.luca{
+	color: #0495FF;
+}
+.warn{
+	color: #3CBA54;
+}
+.firstt{
+	padding-top: 2em !important;
+}
+.chat-body{
+	padding: 2em;
+}
+button#btn-chat {
+    padding: 1.5em;
+    padding-bottom: 1em;
+}
+.modal-footer .input-group input#btn-input {
+    padding: 2em;
+    padding-left: 10px;
+}
+
+.imp-links{
+    padding: 0 0 2em 0;
+}
+.links-wrapper{
+    padding-top: 2em;
+}
+.starter-template{
+    padding: 1em 0;
+}
+.demo-img {
+    margin-bottom: 2em;
+}
+/*.demo-img img{
+    width:50%;
+}*/
+.next-previous-wraper{
+    padding-top: 3em;
+}
+/*.demo-img:hover img{
+    opacity: 0.3;
+}
+.demo-img:hover .middle {
+  opacity: 1;
+}*/
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+      top: 43%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 30px;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .demo-img img{
+    width:100%;
+}
+.chat li.left .chat-body{
+    padding: 0em;
+}
+.chat-body{
+    padding: 0em;
+}
+}
+
+/*.chat-body.clearfix strong {
+    font-size: 16px;
+}*/
+body{
+   font-size: 16px;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+ .chat li .chat-body p{
+color: #1C2833;
+word-wrap: break-word;
+}
+nput[type='text'] {
+    background-image: url(mic.png);
+    background-position: 99% 13px;
+    background-repeat: no-repeat;
+    background-size: 2%;
+}
+
+.img-logo img{
+    width: 10%;
+}
+.mob-hide{
+    display:none;
+}
+.breadcrum p{
+    font-size: 12px;
+    padding-top: 1em;
+}
+
+.imp-links p:nth-child(2){
+    padding-left: 37px;
+	font-style: italic;
+	color: #888484;
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.footer{
+    padding: 1em 0;
+    background-color: #000;
+}
+.foo-left, .foo-right{
+    display: inline;
+    color: #fff;
+}
+.dis p{
+    color: #fff;
+    font-size: 14px;
+    padding: 4em 1em 0 1em;
+}
+@media (max-width: 768px){
+.imp-links p:nth-child(2){
+        font-size: 13px;
+    }
+    .imp-links h1{
+        font-size: 29px;
+    }
+    .img-logo img{
+    width: 40%;
+    }
+    input[type='text'] {
+    background-size: 10%;
+    }
+    .container-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .mob-hide{
+        display:block;
+    }
+    .panel-body{
+    padding: 10px 5px;
+    }
+    .breadcrum p{
+    padding-top: 2em;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid">
+
+                <div class="modal-body">
+					<div class="panel-body">
+						<div class="img-logo text-center">
+                            <a href="../index.html"><img src="../img/Yahoo.png" alt=""></a>
+                        </div>
+                        <!-- <div class="breadcrum">
+                            <p><span><a href="index.html">Home</a></span> > <span><a href="#.">Apple Equity Research ssignment</a></span></p>
+                        </div> -->
+                    <ul class="chat">
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body firstt clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Hello, I'm Marissa Mayer, a graduate of Stanford and was a long-time executive, usability leader, and was a key spokesperson for Google. I was also the former President of Yahoo from 2012 to 2017.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: Hello, I am Larry Page; an American computer scientist. But the world more popularly knows me as the Founder of Google. We've been associated with Yahoo since our early days. Let's speak about it in detail during the discussion.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: Hello, Jerry Yang here. I may have a funny name, but that hasn't deterred me from founding Yahoo and making it big - $100 billion at its peak. David Filo was my partner and supporter in throughout this journey.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: Hi, good day to everyone. I'm Lowell McAdam, the CEO of Verizon. For those who don't know us, Verizon is a digital communications conglomerate - we do everything from mobile phones, TVs, networks, cellular service, etc.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Google, Yahoo, Verizon - we have a lot of tech space players conversing today. I think this is going to be fun.         Google, Yahoo, Verizon - we have a lot of tech space players conversing today. I think this is going to be fun.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: It would have been fun had all 3 companies been in business. Unfortunately, Yahoo is out of it for almost one and a half decade now. Marissa, you can apply back to Google now. I'll be happy to reject your application.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Just like Yahoo rejected you in 1998? I'm sure you cried yourself to sleep in your mama's home that night. Didn't you Larry?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: Could we please tone down this American sarcasm and be a little professional for a while? Yes, Yahoo isn't doing as well as it did earlier. Yes, we made mistakes. But it was a great achievement to have survived through everything.</p>
+</div>
+</li>
+
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: Yes, the world will always know Yahoo as the pioneer for internet services. You guys started pretty early - 1994, right?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: Oh yes, we did. Things happened very fast. People wanted to explore the internet but didn't have means to do it. We gave it to them, and before we knew it, we went public within one year of being incorporated.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: Oh, absolutely Jerry. As a teenager, I used a lot of Yahoo myself (only if it was to figure out how to make it better). But still - Yahoo was the secondly ranked website in terms of internet traffic.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Of course, the internet was all the rage back then. It still is, but the amount of money Wall Street threw at any company which had a '.com' at its end was crazy!</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Larry Page and Sergei also wanted a piece of the pie. It was 1998 when they approached Jerry, asking for $1 million in exchange of a page ranking algorithm.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: It was stupid of us to reject their idea. We, unknowingly, gave the birth to Google. It still hurts, but fortunately, we made other good investments?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: Like?</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: We purchased a 30% stake in Alibaba.com. Jack Ma, the founder, is still a dear friend and more importantly, even when Yahoo as a service provider isn't able to do well, our holding in Alibaba is helping us out.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: Well, Jerry and Larry, those early days were quite good - no doubt. But the 2002 market crash must have been pretty emotionally taxing on you guys. Hundreds of companies shut doors, but Google, Amazon, Yahoo survived.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: It was pretty bad, no doubt. The Yahoo share fell from $118 to $4.6. They lost 96% of their market cap. Google's share lost a lot, too. Amazon fired most of its staff.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: Yes, there are factors beyond one's control. In 2002, we were the most visited website in the world. We acquired Flickr and had even made an offer to Mark to buy his company.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: Not just any Mark, he's referring to Mark Zuckerberg. Yahoo was willing to pay $1 billion to acquire Facebook, but he refused. I did hear rumors that had it been an offer for 1.1 billion, the board of directors would have forced Mark to accept the offer.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: Had that happened, Yahoo, Facebook, and the internet would have been a completely different place today. </p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: They got an offer to get acquired themselves, too. In 2008, Microsoft offered $44.6 billion dollars to Yahoo. Yahoo laughed it off and arrogantly said that 'it did not correctly reflect the value of the company.'</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: I'm glad that they rejected the offer. Because in 2016, we acquired it at one-tenth of the price: at only $4.8 billion.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: We did a lot of good stuff, but unfortunately, couldn't keep up with the times. So far, we've acquired 114 companies but haven't been able to capitalize on the technology or earnings from them.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: I came to Yahoo from Google in 2012, and I could feel that it was a stressed company. We did not know what we stood for or what we wanted. The investors were angry. They changed 4 CEOs in 6 years.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: Ouch! That's a formula for disaster. The top management must have been all riled up. And before you know, the captains start abandoning the sinking ship.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="luca primary-font">Jerry Yang (Founder, Yahoo) :</strong><br class="mob-hide"> Founder: We did have the market leadership at one point in time, but none of our products could keep with the times. We even moved to mobile technology, though that developing that platform may help us. But all in waste.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="thom primary-font">Larry Page (Founder, Google) :</strong><br class="mob-hide"> Google: Don't be too hard on yourself. Marissa was not a great CEO either. She couldn't give the direction the company needed. You were making $4.5 billion in losses! Even your Alibaba cash flows weren't utilized efficiently.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="ross primary-font">Marissa Mayer (CEO, Yahoo) :</strong><br class="mob-hide"> CEO: I want to see how Verizon turns this company around. As of right now, Yahoo is practically non-existent. The only good memory people have is Yahoo answers - which were a good source of entertainment.</p>
+</div>
+</li>
+
+ <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    
+                                </div>
+<p><strong class="warn primary-font">Lowell McAdam (CEO, Verizon) :</strong><br class="mob-hide"> Verizon: Don't worry Marissa, we won't let you down. Yahoo still has potential and as we've known in tech history: it only takes one innovation to turntables.</p>
+</div>
+</li>
+
+                    </ul>
+                	</div>
+				</div>
+				<div class="modal-footer">
+					<div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Voice to Text (Invited users only)" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+				</div>
+                <div class="imp-links">
+                    <h1 style="padding-left: 1em;">Research Assignment</h1>
+<p>if you skip this now, you're probably skipping for life!</p>
+                    <div class="links-wrapper">
+                        <ul>
+                            <li><p><a href="http://www.adweek.com/digital/heres-timeline-yahoo-s-22-year-history-digital-pioneer-172663/" target="_blank">Yahoo!'s history - a digital pioneer</a></p></li>
+                            <li><p><a href="http://observer.com/2016/07/the-rise-and-fall-ok%E2%80%8A-%E2%80%8Amostly-fall-of-yahoo/" target="_blank">The rise and fall</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/stock-analysis/070215/why-yahoos-core-business-negatively-valued-baba-yhoo-goog-amzn-fb.aspx" target="_blank">Yahoo!'s business negatively valued</a></p></li>
+                            <li><p><a href="https://www.forbes.com/sites/briansolomon/2016/07/25/yahoo-sells-to-verizon-for-5-billion-marissa-mayer/#1a53481c450f" target="_blank">Yahoo! sells to Verizon</a></p></li>
+                            <li><p><a href="https://www.investopedia.com/articles/markets/072816/yahoos-stock-only-8-return-10-years-yhoo.asp" target="_blank">Yahoo!'s return analysis</a></p></li>
+                            <li><p><a href="https://econsultancy.com/blog/9909-yahoo-s-ten-biggest-mistakes/" target="_blank">Yahoo!'s costliest mistakes</a></p></li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- <hr style="border:1px dashed #eee;">
+                <div class="next-previous-wraper">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="perv" href="main.html">
+                                <img src="img/1.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Previous</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-6">
+                            <div class="demo-img">
+                                <a target="_blank" class="next" href="main.html">
+                                <img src="img/2.png" class="img-responsive" alt="">
+                                <div class="middle">
+                                    <div class="text">Next</div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    </div><!-- /.container -->
+	  <div class="footer col-md-12">
+        <div class="foo-left col-md-6 pull-left">
+            <p><a style="color:#fff;" href="index.html">Knowledge is the edge!</a></p>
+        </div>
+        <div class="foo-right col-md-6">
+	<a style="color: #fff;" href="../index.html" class=" pull-right"><img src="../img/Icon-2.png" alt="">Home</a>
+    </div>
+    <div class="dis">
+        <p>We have selected tech companies and few characters. None of the content has been put up by the company and the characters concerned. This is conducted for learningpurpose where members are playing as the caption characters.</p>
+        <p style="padding-top: 0px;">Credits - ColdFusion</p>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

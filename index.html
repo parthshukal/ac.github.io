@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<!--
+	Template: Torr v.1.0
+	Author: adraft [https://themeforest.net/user/adraft?ref=adraft]
+	Date: 01-09-2017
+	Last update: 01-09-2017
+  
+	FOR THE DEMO PURPOSES, ALL THE COMMENTS ARE REMOVED AND ALL THE HTML CODE IS MINIFIED. IN THE PURCHASED VERSION EVERYTHING IS COMMENTED AND ALL THE HELPFUL INFO IS INCLUDED IN THE DOCUMENTATION!
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Analyst Connections</title>
+    <meta name="description" content="One page HTML5 template, built using flexbox and CSS grid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../apple-icon.html">
+    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <link href="css/animate.min.css" rel="stylesheet" media="all">
+    <link href="css/owl.carousel.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:300,400,500" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+a{
+word-wrap: break-word!important;
+}
+    .portfolio-content{
+        column-count: 1;
+    }
+        @media all and (-ms-high-contrast: none) {
+            .team .member-profile .fa {
+                padding-top: 10px
+            }
+            .carousel-stage,
+            .spinner,
+            .js-spin-bwd .spinner-right,
+            .js-spin-fwd .spinner-right,
+            .js-spin-bwd .spinner,
+            .js-spin-fwd .spinner,
+            .js-spin-bwd .spinner-right .spinner-face.js-next,
+            .js-spin-bwd .spinner-face.js-next,
+            .spinner-right .spinner-face.js-next,
+            .spinner-face.js-next,
+            .js-active {
+                transform: none
+            }
+        }
+        .wrapper>.container{
+            width:1170px;
+            margin: 0 auto;
+            }
+            .portfolio-content{
+                    height: 22em;
+                }
+            @media (max-width: 768px){
+                .wrapper>.container {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+                .portfolio-content{
+                    height: initial;
+                }
+                .wrapper{
+                    margin-left: 1em;
+                    margin-right: 1em;
+                }
+            }
+        .image-title.overlay.overlay-dark-70 h2 {
+            text-align: center;
+        }
+        .header.overlay.overlay-dark-80 {
+            height: 50vh;
+        }
+        .header.overlay.head {
+            height: 100vh;
+        }
+        .text-rotator span {
+            height: 70vh;
+            vertical-align: middle;
+        }
+        .logo-img{
+           /* display: inline*/
+        }
+        .logo-img img{
+            width: 8%;
+        }
+        .bottom-rotator span{
+            height: 50vh!important;
+        }
+        .bg-img{
+            background: #000;
+        }
+        .bg-img:before{
+            opacity: 0.6;
+            background-image: url("img/Life School - Header.png");
+             -ms-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        .bt-bg-img{
+            background: #000;   
+        }
+        .bt-bg-img:before{
+            opacity: 0.6;
+            /*background: #215676;*/
+            background-image: url("img/footer.jpeg");
+             -ms-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+
+        }
+        .header .parallax {
+            background: none;
+        }
+        .header-bg{
+            /*background-color: #000;*/
+            background: #323232;
+            /*background: -webkit-linear-gradient(left, #fff, #10304F);*/
+           /* background: -o-linear-gradient(left, #fff, #10304F);
+            background: linear-gradient(to right, #fff, #10304F); 
+            opacity: 0.7;*/
+        }
+        .logo1{
+            margin-bottom: 0px; 
+            margin-top: 10px;
+            font-size: 5.7rem;
+            color:#fff;
+        }
+        .sub-logo{
+            text-align: center; margin-top: 0px; font-size: 2.8rem;
+        }
+        .text-rotator span {
+            padding-left: 4em;
+        }
+        .logo-desktop{
+           width: 6%;
+            position: absolute;
+            top: 1.6em;
+            right: 1em;
+            margin-right: 1em;
+        }
+         @media (max-width: 768px){
+            .logo1{
+              
+                margin-bottom: 0px;
+                margin-top: 18px;
+                font-size: 2em;
+                position: absolute;
+                /*top: -0.5em;
+                right: 3.5em;*/
+            }
+            .sub-logo{
+                text-align: center;
+                margin-top: 25px;
+                font-size: 2.8rem;
+                position: relative;
+                top: -7.5em;
+            } 
+            .logo-img img {
+                width: 17%;
+                margin-left: 1em;
+            } 
+            .pull-right{
+                position: absolute;
+                left: 21em;
+                top: 0.8px;
+            }
+            .pull-right h1{
+                font-weight: 600;
+            }
+            .analyst-logo{
+                top: -1%;
+                left: 66%;
+            }
+            .connection-logo{
+                top: 6%;
+                right: 2%;
+            }
+            .logo-desktop{
+                width: 10%;
+                margin-right: 0em;
+            } 
+         }
+    /**/
+    </style>
+    <script src="../../../use.fontawesome.com/3e2da29de5.js"></script>
+    <!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script> <![endif]-->
+</head>
+
+<body>
+    <!-- <header class="header overlay head overlay-dark-80 bg-img">
+        <div class="parallax" data-parallax='{"y":200}'></div>
+        <div class="header-content">
+            <div class="header-bg">
+                <div class="logo-img">
+                    <img src="img/Analyst Connections-Logo.png" alt="">
+                </div>
+                <div class="pull-right" style="margin-right: 1em;">
+                    <h1 class="logo1">Analyst <br>Connections</h1>
+                    <p class="sub-logo">Learn by doing!</p>
+                </div>
+                <div class="text-rotator"> 
+                    <span class="active">Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                    <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                     <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                     <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                     <span>Learn beyond classroom!</span>
+                    <span>Theory meets practice!</span>
+                </div>
+            </div>
+            <nav class="navigation main-nav"> <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i></a>
+                <div class="menu-wrapper">
+                    <ul class="menu">
+                        <li><a href="http://adraft.x10.mx/torr/torr1">Home</a>
+                        </li>
+                        <li><a href="#about">About</a>
+                        </li>
+                        <li><a href="#services">Services</a>
+                        </li>
+                        <li><a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li><a href="#blog">Blog</a>
+                        </li>
+                        <li><a href="#testimonials">Testimonials</a>
+                        </li>
+                        <li><a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+
+    <div class="header-bg">
+        <div class="logo-img text-center">
+            <a href="index.html"><img src="img/ac-white.png" alt=""></a>
+        </div>
+        <div class="logo-desktop" style="">
+           <!--  <h1 class="logo1 text-center analyst-logo" style="">Analyst</h1>
+            <h1 class="logo1 connection-logo" style="margin-top: 0px;">Connections</h1> -->
+            <!-- <p class="sub-logo">Learn by doing!</p> -->
+            <a href="user.html"><img src="img/user-2-icon.png" alt=""></a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container-fluid" style="padding: 0px">
+        <main class="main">
+            <div class="content">
+               
+
+                
+                <section class="portfolio">
+                    <header id="portfolio" class="section-header-wrapper">
+                        <div class="section-header">
+                            <h2 style="font-size: 6.5rem;"></h2>
+                            <!-- <p></p> -->
+                        </div>
+                    </header>
+                    <section class="portfolio-content-wrapper1">
+                        <div class="portfolio-content" style="height: auto;">
+
+                            <!-- Tesla -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="tesla-story-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/1.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Tesla - Story</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="elon-musk-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/2.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Elon Musk</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="spacex-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/3.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>SpaceX</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="nikola-tesla-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/4.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Nikola</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="tesla-valuation-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/5.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Tesla - Valuation</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="hyperloop-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/6.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Hyperloop</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="solar-city-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/7.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Solar City</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Apple -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="steve-jobs-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/8.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Steve Jobs</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="apple-growth-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/9.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Apple - Growth</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="apple-valuation-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/10.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Apple - Valuation</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="apple-struggle-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/11.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Apple - Struggle</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+
+                            <!-- Samsung -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="samsung-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/12.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Samsung</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="ios-vs-android-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/13.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>ios vs Android</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Amazon -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="amazon-story-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/14.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Amazon - Story</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="amazon-valuation-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/15.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Amazon - Valuation</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Facebook -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="facebook-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/16.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Facebook</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="facebook-vs-twitter-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/17.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Facebook vs Twitter</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Microsoft -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="bill-gates-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/18.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Bill Gates</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="microsoft-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/19.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Microsoft</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Google -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="google-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/45.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Google</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+    
+                            <!-- Youtube -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="youtube-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/21.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>YouTube</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                           <!--  <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="./youtube-valuation.html" target="_blank"><figure class=""> <img src="img/chat-logo/21.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>YouTube - Valuation</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div> -->
+
+                            <!-- Nokia -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="nokia-1-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/22.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Nokia 1</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="nokia-2-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/23.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Nokia 2</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="nokia-comeback-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/24.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Nokia - Comeback</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Sony -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="sony-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/25.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Sony</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Tech Investor, Lifecycle -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="tech-life-cycle-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/26.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Tech Life Cycle</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                             <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="tech-investor-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/27.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Tech Investor</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                             
+
+                            <!-- yahoo -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="yahoo-story-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/28.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Yahoo - Story</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="yahoo-valuation-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/29.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Yahoo - Valuation</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Snapchat -->
+                             <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="snapchat-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/30.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Snapchat</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Ferrari -->
+                           <!--  <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="./ferrari.html" target="_blank"><figure class=""> <img src="img/chat-logo/31.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Ferrari</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div> -->
+
+                            <!-- VW -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="volkswagen-story-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/32.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Volkswagen - Story</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="volkswagen-scandal-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/33.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Volkswagen - Scandal</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Toyota -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="toyota-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/34.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Toyota</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Disney -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="disney-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/35.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Disney</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Starbucks -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="starbucks-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/36.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Starbucks</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- General Electric -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="general-electric-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/38.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>General Electric</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- uber -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="uber-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/39.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Uber</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- valeant -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="valeant-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/41.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Valeant</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Fed interest -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="fed-interest-rates-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/46.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Fed Interest Rates</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- naming game -->
+                            <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="whats-in-a-name-equity-research-assignment-download" target="_blank"><figure class=""> <img src="img/chat-logo/43.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>What's in a Name</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div>
+
+                            <!-- Corporate Etiquette -->
+                            <!-- <div class="portfolio-item col-md-4">
+                                <div class="image-hover">
+                                        <a href="./corporate-etiquette.html" target="_blank"><figure class=""> <img src="img/chat-logo/44.png" class="img-responsive"> </figure>
+                                        <div class="image-title overlay overlay-dark-70">
+                                            <h2>Corporate Etiquette</h2>
+                                        </div>
+                                        </a>
+                                </div>
+                            </div> -->
+
+
+                        </div>
+                    </section>
+                </section>
+                
+            <br><br>
+            </div>
+        </main></div>
+    </div>
+    <div class="header-bg">
+        <div class="text-center" style="padding: 1em 0">
+            <h2>Knowledge is the edge!</h2>
+        </div>
+    </div>
+    <!-- <div class="header overlay overlay-dark-80 bt-bg-img">
+        <div class="parallax" data-parallax='{"y":200}'></div>
+        <div class="header-content" style="background: #215676;">
+            <div class="logo">
+                <h1>Life School</h1>
+            </div>
+            <div class="text-rotator bottom-rotator">
+                <span class="active">Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                <span>Knowledge is the edge!</span>
+                
+                 
+            </div>
+            
+        </div>
+    </div> -->
+   <!--  <footer class="footer">
+        <div class="footer-left-bg"></div>
+        <div class="footer-right-bg"></div>
+        <div class="footer-wrapper">
+            <div class="footer-left-wrapper footer-half">
+                <div class="footer-content footer-left-content">
+                    
+                </div>
+            </div>
+            <div class="footer-right-wrapper footer-half">
+                <div class="footer-content footer-right-content"> <address>Mumbai, India</address>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <script src="js/3e2da29de5.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.parallax-scroll.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/simplezoom.min.js"></script>
+    <script src="js/jquery.blog-carousel.js"></script>
+    <script src="js/animatedModal.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="js/map.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script>
+        textRotator = function(element) {
+            var words = $(element),
+                total = words.length - 1,
+                position = 0,
+                current = null,
+                timer = null;
+            $(element).first().addClass('active');
+            var autoSlide = function() {
+                words.removeClass('active');
+                if (position === total) {
+                    position = 0;
+                } else {
+                    position = position + 1;
+                }
+                words.eq(position).addClass('active');
+            };
+            timer = setInterval(autoSlide, 3000);
+        };
+        $(document).ready(function() {
+            textRotator('.text-rotator span');
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var touch = $('#resp-menu');
+            var menu = $('.menu-wrapper');
+            $(touch).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 767 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                navContainer: ".intro-nav",
+                navElement: "i",
+                navClass: ["fa fa-arrow-left", "fa fa-arrow-right"],
+                navText: ["", ""]
+            });
+        });
+    </script>
+    <script>
+        function isScrolledIntoView(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top;
+            if (docViewBottom > elemTop) return true;
+            else return false;
+        }
+        $(document).ready(function() {
+            $(document).scroll(function() {
+                if (isScrolledIntoView(".skills-progress")) {
+                    $('.skillbar').each(function() {
+                        $(this).find('.skillbar-bar').animate({
+                            width: $(this).attr('data-percent')
+                        }, 3000);
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        $(".services .tab-content-wrapper").hide();
+        $(".services .tab-content-wrapper:first").show();
+        $(".services .services-tabs li").click(function() {
+            $(".services .tab-content-wrapper").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".services .services-tabs li").removeClass("tab-active");
+            $(this).addClass("tab-active");
+            $(".services .tab-heading").removeClass("active");
+            $(".services .tab-heading[rel^='" + activeTab + "']").addClass("active");
+            target = $('.services .services-tabs');
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        });
+        $(".services .tab-heading").click(function() {
+            $(".services .tab-content-wrapper").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".services .tab-heading").removeClass("active");
+            $(this).addClass("active");
+            $(".services .services-tabs li").removeClass("tab-active");
+            $(".services .services-tabs li[rel^='" + activeTab + "']").addClass("tab-active");
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $("#" + activeTab).fadeIn();
+            }
+        });
+    </script>
+    <script>
+        $('.image-link').simplezoom();
+    </script>
+    <script>
+        $(".carousel-control").click(function() {
+            target = $('.blog-wrapper');
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        });
+    </script>
+    <script>
+        function setAnimatedModal(selector) {
+            $("." + selector).animatedModal({
+                modalTarget: selector,
+                animatedIn: 'bounceInUp',
+                animatedOut: 'bounceOutDown',
+                color: '#fff'
+            });
+        }
+        var modalBlockCount = 4;
+        for (i = 1; i <= modalBlockCount; i++) {
+            setAnimatedModal('modal-blog-' + i);
+        }
+    </script>
+    <script>
+        $(".testimonials .tab-content-wrapper").hide();
+        $(".testimonials .tab-content-wrapper:first").show();
+        $(".testimonials .tabs li").click(function() {
+            $(".testimonials .tab-content-wrapper").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".testimonials .tabs li").removeClass("tab-active");
+            $(this).addClass("tab-active");
+            $(".testimonials .tab-heading").removeClass("active");
+            $(".testimonials .tab-heading[rel^='" + activeTab + "']").addClass("active");
+            target = $('.testimonials .tabs');
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        });
+        $(".testimonials .tab-heading").click(function() {
+            $(".testimonials .tab-content-wrapper").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".testimonials .tab-heading").removeClass("active");
+            $(this).addClass("active");
+            $(".testimonials .tabs li").removeClass("tab-active");
+            $(".testimonials .tabs li[rel^='" + activeTab + "']").addClass("tab-active");
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $("#" + activeTab).fadeIn();
+            }
+        });
+    </script>
+    <script>
+        $(document).on('click', '.menu a[href^="#"]', function(e) {
+            var id = $(this).attr('href');
+            var $id = $(id);
+            if ($id.length === 0) {
+                return;
+            }
+            e.preventDefault();
+            var pos = $id.offset().top;
+            $('html, body').animate({
+                scrollTop: pos
+            }, 2000);
+        });
+    </script>
+</body>
+<!-- Mirrored from adraft.x10.mx/torr/torr1/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Nov 2017 16:04:46 GMT -->
+
+</html>
